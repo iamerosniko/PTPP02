@@ -10,17 +10,18 @@
         <div class="col-md-2">
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li role="presentation" ><a href="#menu1" data-toggle="tab"><i class="fa fa-table"></i>&nbsp;Main Table</a></li> -->
-                <li role="presentation" class="active"><a href="#menu2" data-toggle="tab" ><i class="fa fa-location-arrow"></i>&nbsp;Department</a></li>
-                <li role="presentation"><a href="#menu3" data-toggle="tab"><i class="fa fa-institution"></i>&nbsp;Project Category</a></li>
-                <li role="presentation"><a href="#menu4" data-toggle="tab"><i class="fa fa-cogs"></i>&nbsp;Customer Map Code</a></li>
-                <li role="presentation"><a href="#menu5" data-toggle="tab"><i class="fa fa-user"></i>&nbsp;Customer Centric Code</a></li>
-                <li role="presentation"><a href="#menu6" data-toggle="tab"><i class="fa fa-cubes"></i>&nbsp;Contacts</a></li>
+                <li [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['./', {outlets: {'mroute': ['maintest1']}}]"><i class="fa fa-location-arrow"></i>&nbsp;Department</a></li>
+                <li [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['./', {outlets: {'mroute': ['maintest2']}}]"><i class="fa fa-institution"></i>&nbsp;Project Category</a></li>
+                <li [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['./', {outlets: {'mroute': ['maintest3']}}]"><i class="fa fa-cogs"></i>&nbsp;Customer Map Code</a></li>
+                <li [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['./', {outlets: {'mroute': ['maintest4']}}]"><i class="fa fa-user"></i>&nbsp;Customer Centric Code</a></li>
+                <li [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['./', {outlets: {'mroute': ['maintest5']}}]"><i class="fa fa-cubes"></i>&nbsp;Contacts</a></li>
             </ul>
             <br />
         </div>
         <div class="col-md-10">
             <div class="tab-content">
-              here
+                <router-outlet name="mroute"></router-outlet>
+               
             </div>
         </div>
     </div>
