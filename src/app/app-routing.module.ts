@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { MaintenanceComponent,MaintestComponent } from './views/maintenance/maintenance'
+import { MainComponent } from './views/main/main'
+import { SearchComponent } from './views/search/search'
+import { ReportsComponent } from './views/reports/reports'
 const routes: Routes = [
   { 
     path:'Maintenance',component:MaintenanceComponent,
@@ -12,6 +15,15 @@ const routes: Routes = [
       { path: 'maintest4', component: MaintestComponent, outlet: 'mroute' },
       { path: 'maintest5', component: MaintestComponent, outlet: 'mroute' }
     ]  
+  },
+  {
+    path:'Search',component:SearchComponent,
+  },
+  {
+    path:'Main',component:MainComponent
+  },
+  {
+    path:'Reports',component:ReportsComponent,
   }
 ];
 
