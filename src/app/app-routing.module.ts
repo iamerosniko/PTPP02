@@ -9,11 +9,12 @@ const routes: Routes = [
   { 
     path:'Maintenance',component:MaintenanceComponent,
     children: [
-      { path: 'maintest1', component: MaintestComponent, outlet: 'mroute' },
-      { path: 'maintest2', component: MaintestComponent, outlet: 'mroute' },
-      { path: 'maintest3', component: MaintestComponent, outlet: 'mroute' },
-      { path: 'maintest4', component: MaintestComponent, outlet: 'mroute' },
-      { path: 'maintest5', component: MaintestComponent, outlet: 'mroute' }
+      { path: 'Departments', component: MaintestComponent, outlet: 'mroute' },
+      { path: 'ProjectCategories', component: MaintestComponent, outlet: 'mroute' },
+      { path: 'CustomerMaps', component: MaintestComponent, outlet: 'mroute' },
+      { path: 'CustomerCentrics', component: MaintestComponent, outlet: 'mroute' },
+      { path: 'Contacts', component: MaintestComponent, outlet: 'mroute' },
+      { path: '', component: MaintestComponent, outlet: 'mroute'},
     ]  
   },
   {

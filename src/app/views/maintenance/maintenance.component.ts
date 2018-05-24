@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MaintenanceComponent implements OnInit {
 
   constructor() { }
-  test:string="haha"
+  selectedName:number =0;
   ngOnInit() {
   }
 
