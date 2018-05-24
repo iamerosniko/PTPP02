@@ -11,6 +11,7 @@ import { TopNavComponent } from './views/top-nav/top-nav.component';
 import { AppComponent } from './app.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,TopNavComponent
