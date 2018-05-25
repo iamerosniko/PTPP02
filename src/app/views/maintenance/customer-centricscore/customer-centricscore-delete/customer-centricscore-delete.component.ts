@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-customer-centricscore-delete',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerCentricscoreDeleteComponent implements OnInit {
 
-  constructor() { }
+  cuscenBack(){
+    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['CustomerCentrics']}}])
+  }
+
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }

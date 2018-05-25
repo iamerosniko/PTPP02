@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-projectcategory-list',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectcategoryListComponent implements OnInit {
 
-  constructor() { }
+  procatDetails(){
+    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['ProjectCategories-AddEdit']}}])
+  };
+
+  procatDelete(){
+    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['ProjectCategories-Delete']}}])
+  };
+
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-contacts-addedit',
   templateUrl: './contacts-addedit.component.html',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsAddeditComponent implements OnInit {
 
-  constructor() { }
+  conBack(){
+    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['Contacts']}}])
+  }
+
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }

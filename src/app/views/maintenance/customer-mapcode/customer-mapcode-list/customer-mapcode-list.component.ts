@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-customer-mapcode-list',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerMapcodeListComponent implements OnInit {
 
-  constructor() { }
+  cusmapDetails(){
+    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['CustomerMaps-AddEdit']}}])
+  };
+
+  cusmapDelete(){
+    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['CustomerMaps-Delete']}}])
+  };
+
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }

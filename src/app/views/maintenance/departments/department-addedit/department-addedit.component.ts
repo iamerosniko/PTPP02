@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-department-addedit',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartmentAddeditComponent implements OnInit {
 
-  constructor() { }
+  depBack(){
+    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['Departments']}}])
+  };
+
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
