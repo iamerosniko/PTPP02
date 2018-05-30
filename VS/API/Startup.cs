@@ -53,7 +53,7 @@ namespace API
         using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>()
         .CreateScope())
         {
-          serviceScope.ServiceProvider.GetService<Context>().Database.Migrate();k
+          serviceScope.ServiceProvider.GetService<Context>().Database.Migrate();
         }
       }
       catch (Exception ex)
