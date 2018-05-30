@@ -1,3 +1,132 @@
-<p>
-  reports works!
-</p>
+<div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Reports</h3>
+                <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -15px; " />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="sidepanel" class="col-md-3">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li>
+                            <div id="boditems" class="row">
+                                <div class="col-md-12">
+                                    <label class="control-label">Owner</label>
+                                    <select type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" >Select Owner</select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="boditems" class="row">
+                                <div class="col-md-12">
+                                    <label class="control-label">Project Manager</label>
+                                    <select type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" >Select Project Manager</select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="boditems" class="row">
+                                <div class="col-md-12">
+                                    <label class="control-label">Department</label>
+                                    <select type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" >Select Department</select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="boditems" class="row">
+                                <div class="col-md-12">
+                                    <label class="control-label">Project Category</label>
+                                    <select type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" >Select Project Category</select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="boditems" class="row">
+                                <div class="col-md-12">
+                                    <label class=" control-label">Project Number</label>
+                                    <input type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" />
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="boditems" class="row">
+                                <div class="col-md-12">
+                                     <label class="control-label col-md-12">Status</label>
+                                    <select type="text" maxlength="100" class="col-md-12 form-control ng-untouched ng-pristine ng-valid" >Select Status</select>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="boditems" class="row">
+                                <div class="col-md-12"><div>
+                                    <label class="control-label">Start Date</label></div>
+                                    <div class="input-group">
+                                        <input type="date" maxlength="100" class="form-control">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="date" maxlength="100" class="form-control">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="boditems" class="row">
+                                <div class="col-md-12">
+                                    <label class="control-label">End Date</label>
+                                    <div class="input-group">
+                                        <input type="date" maxlength="100" class="form-control">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="date" maxlength="100" class="form-control">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="boditems" class="row">
+                                <div class="col-md-12">
+                                    <label class="control-label">Previous Date</label>
+                                    <div class="input-group">
+                                        <input type="date" maxlength="100" class="form-control">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="boditems" class="row">
+                                <div class="col-md-12">
+                                  <label class="control-label">Date Added</label>
+                                  <div class="input-group">
+                                    <input type="date" class="form-control">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                  </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="boditems" class="row">
+                                <div class="col-md-12">
+                                    <a id="searchbtn" (click)="search()" class="btn btn-primary btn-sm">Search&nbsp;<i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <br />
+                </div>
+            </div>
+            <div>
+                <div class="col-md-10">
+                    <div class="tab-content">
+                        <router-outlet name="rroute"></router-outlet>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
