@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace BW.Providers
 {
   [Produces("application/json")]
-  public class CustomersController : Controller
+  public class PCustomers : Controller
   {
     private string _bearer;
     private ApiServices _api;
 
-    public CustomersController(string bearer)
+    public PCustomers(string bearer)
     {
       _bearer = bearer;
       _api = new ApiServices("Customers", bearer);
