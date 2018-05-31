@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BW.Providers
+namespace BW.Provider
 {
   [Produces("application/json")]
   public class PCategories : Controller
@@ -19,33 +19,28 @@ namespace BW.Providers
       _api = new ApiServices("Categories", bearer);
 
     }
-    [HttpGet]
     public async Task<IEnumerable<PP_Category>> Get()
     {
       return JsonConvert.DeserializeObject<IEnumerable<PP_Category>>(await _api.Get());
     }
 
-    [HttpGet("{id}")]
     public async Task<PP_Category> Get(string ID)
     {
       return JsonConvert.DeserializeObject<PP_Category>(await _api.Get(ID));
     }
 
-    [HttpPost]
     public async Task<PP_Category> Post([FromBody]PP_Category value)
     {
       string body = JsonConvert.SerializeObject(value);
       return JsonConvert.DeserializeObject<PP_Category>(await _api.Post(body));
     }
 
-    [HttpPut("{id}")]
     public async Task<PP_Category> Put(string id, [FromBody]PP_Category value)
     {
       string body = JsonConvert.SerializeObject(value);
       return JsonConvert.DeserializeObject<PP_Category>(await _api.Put(id, body));
     }
 
-    [HttpDelete("{id}")]
     public async Task<PP_Category> Delete(string id)
     {
       var result = await _api.Delete(id);
