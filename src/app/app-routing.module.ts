@@ -17,20 +17,24 @@ const routes: Routes = [
       { path: 'CustomerCentrics', component: CustomerCentricscoreListComponent, outlet: 'mroute' },
       { path: 'Contacts', component: ContactsListComponent, outlet: 'mroute' },
       { path: '', component: MaintestComponent, outlet: 'mroute'},
-      // forms here
-      { path: 'Departments-AddEdit', component: DepartmentAddeditComponent, outlet: 'mroute' },
-      { path: 'ProjectCategories-AddEdit', component: ProjectcategoryAddeditComponent, outlet: 'mroute' },
-      { path: 'CustomerMaps-AddEdit', component: CustomerMapcodeAddeditComponent, outlet: 'mroute' },
-      { path: 'CustomerCentrics-AddEdit', component: CustomerCentricscoreAddeditComponent, outlet: 'mroute' },
-      { path: 'Contacts-AddEdit', component: ContactsAddeditComponent, outlet: 'mroute' },
-      { path: '', component: MaintestComponent, outlet: 'mroute'},
+      // forms here Add
+      { path: 'DepartmentsNew', component: DepartmentAddeditComponent, outlet: 'mroute' },
+      { path: 'ProjectCategoriesNew', component: ProjectcategoryAddeditComponent, outlet: 'mroute' },
+      { path: 'CustomerMapsNew', component: CustomerMapcodeAddeditComponent, outlet: 'mroute' },
+      { path: 'CustomerCentricsNew', component: CustomerCentricscoreAddeditComponent, outlet: 'mroute' },
+      { path: 'ContactsNew', component: ContactsAddeditComponent, outlet: 'mroute' },
+       // forms here Edit
+       { path: 'DepartmentsEdit/:departmentID', component: DepartmentAddeditComponent, outlet: 'mroute' },
+       { path: 'ProjectCategoriesEdit/:categoryID', component: ProjectcategoryAddeditComponent, outlet: 'mroute' },
+       { path: 'CustomerMapsEdit/:mapID', component: CustomerMapcodeAddeditComponent, outlet: 'mroute' },
+       { path: 'CustomerCentricsEdit/:centricScoreID', component: CustomerCentricscoreAddeditComponent, outlet: 'mroute' },
+       { path: 'ContactsEdit/:contactsID', component: ContactsAddeditComponent, outlet: 'mroute' },
       // delete area here
-      { path: 'Departments-Delete', component: DepartmentDeleteComponent, outlet: 'mroute' },
-      { path: 'ProjectCategories-Delete', component: ProjectcategoryDeleteComponent, outlet: 'mroute' },
-      { path: 'CustomerMaps-Delete', component: CustomerMapcodeDeleteComponent, outlet: 'mroute' },
-      { path: 'CustomerCentrics-Delete', component: CustomerCentricscoreDeleteComponent, outlet: 'mroute' },
-      { path: 'Contacts-Delete', component: ContactsDeleteComponent, outlet: 'mroute' },
-      { path: '', component: MaintestComponent, outlet: 'mroute'},
+      { path: 'DepartmentsDelete/:departmentID', component: DepartmentDeleteComponent, outlet: 'mroute' },
+      { path: 'ProjectCategoriesDelete/:categoryID', component: ProjectcategoryDeleteComponent, outlet: 'mroute' },
+      { path: 'CustomerMapsDelete/:mapID', component: CustomerMapcodeDeleteComponent, outlet: 'mroute' },
+      { path: 'CustomerCentricsDelete/:centricScoreID', component: CustomerCentricscoreDeleteComponent, outlet: 'mroute' },
+      { path: 'ContactsDelete/:contactsID', component: ContactsDeleteComponent, outlet: 'mroute' },
     ]  
   },
   {
