@@ -5,6 +5,7 @@ import { MaintenanceModule } from './views/maintenance/maintenance.module'
 import { MainModule } from './views/main/main.module'
 import { ReportsModule } from './views/reports/reports.module'
 import { SearchModule } from './views/search/search.module'
+import { HttpModule } from '@angular/http'
 
 import { TopNavComponent } from './views/top-nav/top-nav.component';
 
@@ -18,7 +19,7 @@ import { AppComponent } from './app.component';
     AppComponent,TopNavComponent
   ],
   imports: [
-    BrowserModule,MaintenanceModule,MainModule,ReportsModule,SearchModule,AppRoutingModule
+    HttpModule,BrowserModule,MaintenanceModule,MainModule,ReportsModule,SearchModule,AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

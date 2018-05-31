@@ -22,7 +22,7 @@ namespace BW.Controllers.FrontendControllers
     }
 
     // GET: api/FEDepartments/5
-    [HttpGet("{id}", Name = "Get")]
+    [HttpGet("{id}")]
     public async Task<PP_Department> Get(string id)
     {
       _providers = new Providers(HttpContext.Session.GetString("authorizationToken"));

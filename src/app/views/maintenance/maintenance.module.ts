@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MaintenanceComponent } from './maintenance.component';
@@ -18,11 +19,13 @@ import { ContactsListComponent } from './contacts/contacts-list/contacts-list.co
 import { ContactsAddeditComponent } from './contacts/contacts-addedit/contacts-addedit.component';
 import { ContactsDeleteComponent } from './contacts/contacts-delete/contacts-delete.component';
 import { ProjectcategoryDeleteComponent } from './project-category/projectcategory-delete/projectcategory-delete.component';
-
+import { CategoryService, CentricScoreService, ClientApiService, ClientApiSettings, ContactService, DepartmentService, MapCodeService} from '../../services/services'
 @NgModule({
   imports: [
+    FormsModule,ReactiveFormsModule,
     CommonModule,RouterModule
   ],
+  providers:[  CategoryService, CentricScoreService, ClientApiService, ClientApiSettings, ContactService, DepartmentService, MapCodeService ],
   declarations: [MaintenanceComponent, MaintestComponent, DepartmentListComponent, DepartmentAddeditComponent, DepartmentDeleteComponent, ProjectcategoryListComponent, ProjectcategoryAddeditComponent, CustomerMapcodeListComponent, CustomerMapcodeAddeditComponent, CustomerMapcodeDeleteComponent, CustomerCentricscoreListComponent, CustomerCentricscoreAddeditComponent, CustomerCentricscoreDeleteComponent, ContactsListComponent, ContactsAddeditComponent, ContactsDeleteComponent, ProjectcategoryDeleteComponent]
 })
 export class MaintenanceModule { }

@@ -6,7 +6,7 @@ import { ClientApiSettings } from './clientapi.settings';
 import { MapCode } from '../entities/entities';
 
 @Injectable()
-export class DepartmentService {
+export class MapCodeService {
 
   constructor(private api:ClientApiService) {
     //uncomment api.authorizedHeader() if AD Authentication is enabled.
