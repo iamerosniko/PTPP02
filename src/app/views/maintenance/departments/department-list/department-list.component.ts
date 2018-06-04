@@ -11,11 +11,11 @@ export class DepartmentListComponent implements OnInit {
   departments:Department[]=[];
   
   /* ROUTING SIDE */
-  depDetails(a:Department){
-    if(a==null)
+  depDetails(dept:Department){
+    if(dept==null)
       this.router.navigate(['../Maintenance', {outlets: {'mroute': ['DepartmentsNew']}}]);
     else
-      this.router.navigate(['../Maintenance', {outlets: {'mroute': ['DepartmentsEdit',a.DepartmentID]}}]);
+      this.router.navigate(['../Maintenance', {outlets: {'mroute': ['DepartmentsEdit',dept.DepartmentID]}}]);
   };
 
   depDelete(){
