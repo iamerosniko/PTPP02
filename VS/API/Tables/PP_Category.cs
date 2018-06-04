@@ -11,5 +11,6 @@ namespace API.Tables
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int CategoryID { get; set; }
     public string Category { get; set; }
+    public string GroupName { get; set; }
   }
 }

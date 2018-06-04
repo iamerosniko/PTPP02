@@ -29,5 +29,7 @@ namespace API.Tables
     public DateTime DateStarted { get; set; }
     public DateTime DateEnded { get; set; }
     public DateTime DatePrevious { get; set; }
+    public string GroupName { get; set; }
+
   }
 }

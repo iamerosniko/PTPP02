@@ -11,5 +11,7 @@ namespace API.Tables
     public int ContactID { get; set; }
     public string ContactName { get; set; }
     public string LastName { get; set; }
+    public string GroupName { get; set; }
+
   }
 }

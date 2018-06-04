@@ -13,5 +13,7 @@ namespace API.Tables
     // accepts json [{},{},{},{},{}] limit to 5
     public string Contacts { get; set; }
     public string Type { get; set; }
+    public string GroupName { get; set; }
+
   }
 }

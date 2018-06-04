@@ -10,5 +10,7 @@ namespace API.Tables
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int DepartmentID { get; set; }
     public string Department { get; set; }
+    public string GroupName { get; set; }
+
   }
 }
