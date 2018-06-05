@@ -26,7 +26,8 @@ export class DepartmentAddeditComponent implements OnInit {
   ngOnInit() {
     this.router.url.includes("New") ? this.formState ="New" : this.formState = "Edit";
     this.departmentID = this.activatedRoute.snapshot.params['departmentID'];
-    this.departmentID!=null ? this.getDependencies() : 
+    this.departmentID!=null ? this.getDependencies() : null;
+    this.department.GroupName='JHSS';
     this.deptForm = this.fb.group({
       Department : [this.department.Department,Validators.required],
       GroupName : [this.department.GroupName,Validators.required],
@@ -35,10 +36,12 @@ export class DepartmentAddeditComponent implements OnInit {
 
   async getDependencies(){
     this.department = <Department> await this.deptSvc.getDepartment(this.departmentID);
+    console.log(this.department)
+    
     this.deptForm = this.fb.group({
-      DepartmentID:[this.department.DepartmentID,Validators.required],
+      DepartmentID:[this.department.DepartmentID],
       Department : [this.department.Department,Validators.required],
-      GroupName : [this.department.GroupName,Validators.required],
+      GroupName : [this.department.GroupName],
     })
   }
 
@@ -52,6 +55,7 @@ export class DepartmentAddeditComponent implements OnInit {
     else{
       result = <Department> await this.deptSvc.putDepartment(this.department);
     }
+    console.log(result);
     if(result!=null)
     {
       await alert("Successfully saved!");

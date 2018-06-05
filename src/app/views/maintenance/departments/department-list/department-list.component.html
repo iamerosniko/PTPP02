@@ -16,12 +16,12 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td></td>						
+						<tr *ngFor="let department of departments">
+							<td><a (click)="depDetails(department)" >{{department.Department}}</a></td>						
 							<td>
 								<div class="btn-group">
-									<a (click)="depDetails()"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
-									<a (click)="depDelete()" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
+									<a (click)="depDetails(department)"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
+									<a (click)="depDelete(department)" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
 								</div>
 							</td>
 						</tr>

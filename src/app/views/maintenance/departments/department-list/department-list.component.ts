@@ -18,8 +18,8 @@ export class DepartmentListComponent implements OnInit {
       this.router.navigate(['../Maintenance', {outlets: {'mroute': ['DepartmentsEdit',dept.DepartmentID]}}]);
   };
 
-  depDelete(){
-    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['Departments-Delete']}}])
+  depDelete(dept:Department){
+    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['DepartmentsDelete',dept.DepartmentID]}}]);
   };
   /* FUNCTIONALITY SIDE */
   constructor(private router:Router,private deptSvc: DepartmentService) { }

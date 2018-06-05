@@ -18,13 +18,13 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-              <td></td>
-              <td></td>
+						<tr *ngFor="let contact of contacts">
+							<td><a (click)="conDetails(contact)">{{contact.ContactName}}</a></td>
+							<td>{{contact.LastName}}</td>
 							<td>
 								<div class="btn-group">
-									<a (click)="conDetails(dept)"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
-									<a (click)="conDelete(dept)" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
+									<a (click)="conDetails(contact)"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
+									<a (click)="conDelete(contact)" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
 								</div>
 							</td>
 						</tr>
