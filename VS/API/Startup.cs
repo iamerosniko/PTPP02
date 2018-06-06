@@ -32,7 +32,7 @@ namespace API
               }
             });
 
-      var connectionString = Configuration["ConnectionStrings"];
+      var connectionString = Configuration["ConnectionStrings:DefaultConnection"];
 
       services.AddDbContext<Context>(cfg =>
       {

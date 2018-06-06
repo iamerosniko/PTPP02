@@ -10,5 +10,7 @@ namespace API.Tables
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int MapCodeID { get; set; }
     public string MapCode { get; set; }
+    public string GroupName { get; set; }
+
   }
 }

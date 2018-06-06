@@ -1,41 +1,48 @@
 export interface Category {
     CategoryID ?: string,
     Category ?: string,
+    GroupName ?: string,
 }
 
 export interface ProjectContacts {
     MainID ?: string,
     Contacts ?: string,
-    Type ?:string
+    Type ?:string,
+    GroupName ?: string,
 }
 
 export interface MapCode {
     MapCodeID ?: string,
     MapCode ?: string,
+    GroupName ?: string,
 }
 
 export interface Department {
     DepartmentID ?: string,
     Department ?: string,
+    GroupName ?: string,
 }
 
 export interface Contact {
     ContactID ?: string,
     ContactName ?: string,
-    LastName ?:string
+    LastName ?:string,
+    GroupName ?: string,
 }
 
 export interface Comment {
     MainID ?: string,
     DateCreated ?: Date,
     FullName ?: string,
-    Comment ?:string
+    Comment ?:string,
+    GroupName ?: string,
 }
 
 export interface CentricScore {
     CentricScoreID ?: string,
     Score ?: string,
-    ScoreDesc ?:string
+    ScoreDesc ?:string,
+    GroupName ?: string,
 }
 
 export interface Main {
@@ -54,4 +61,5 @@ export interface Main {
     DateStarted ?: Date,
     DateEnded ?: Date,
     DatePrevious ?:Date,
+    GroupName ?: string,
 }

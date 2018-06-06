@@ -12,19 +12,19 @@
 				<table class="table table-bordered table-striped table-hover input-sm">
 					<thead>
 						<tr>
-              <th>Score</th>
-              <th>Description</th>
+							<th>Score</th>
+							<th>Description</th>
 							<th>Actions</th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-              <td></td>
-              <td></td>
+						<tr *ngFor="let cs of centricScores">
+							<td><a (click)="cuscenDetails(cs)">{{cs.Score}}</a></td>
+							<td>{{cs.ScoreDesc}}</td>
 							<td>
 								<div class="btn-group">
-									<a (click)="cuscenDetails()"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
-									<a (click)="cuscenDelete()" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
+									<a (click)="cuscenDetails(cs)"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
+									<a (click)="cuscenDelete(cs)" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
 								</div>
 							</td>
 						</tr>

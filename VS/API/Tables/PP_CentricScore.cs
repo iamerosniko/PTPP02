@@ -11,5 +11,7 @@ namespace API.Tables
     public int CentricScoreID { get; set; }
     public int Score { get; set; }
     public string ScoreDesc { get; set; }
+    public string GroupName { get; set; }
+
   }
 }

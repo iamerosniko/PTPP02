@@ -27,6 +27,8 @@ namespace API.Migrations
 
                     b.Property<string>("Category");
 
+                    b.Property<string>("GroupName");
+
                     b.HasKey("CategoryID");
 
                     b.ToTable("PP_Categories");
@@ -36,6 +38,8 @@ namespace API.Migrations
                 {
                     b.Property<int>("CentricScoreID")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("GroupName");
 
                     b.Property<int>("Score");
 
@@ -57,6 +61,8 @@ namespace API.Migrations
 
                     b.Property<string>("FullName");
 
+                    b.Property<string>("GroupName");
+
                     b.HasKey("MainID");
 
                     b.ToTable("PP_Comments");
@@ -68,6 +74,8 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("ContactName");
+
+                    b.Property<string>("GroupName");
 
                     b.Property<string>("LastName");
 
@@ -82,6 +90,8 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Department");
+
+                    b.Property<string>("GroupName");
 
                     b.HasKey("DepartmentID");
 
@@ -107,6 +117,8 @@ namespace API.Migrations
 
                     b.Property<int>("DepartmentID");
 
+                    b.Property<string>("GroupName");
+
                     b.Property<string>("MapCode");
 
                     b.Property<string>("Overview");
@@ -131,6 +143,8 @@ namespace API.Migrations
                     b.Property<int>("MapCodeID")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("GroupName");
+
                     b.Property<string>("MapCode");
 
                     b.HasKey("MapCodeID");
@@ -144,6 +158,8 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Contacts");
+
+                    b.Property<string>("GroupName");
 
                     b.Property<string>("Type");
 

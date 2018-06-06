@@ -1,24 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { DepartmentService } from '../../../../services/services';
+import { Department } from '../../../../entities/entities';
 @Component({
   selector: 'app-department-list',
   templateUrl: './department-list.component.html',
   styleUrls: ['./department-list.component.css']
 })
 export class DepartmentListComponent implements OnInit {
-
-  depDetails(){
-    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['Departments-AddEdit']}}])
+  departments:Department[]=[];
+  
+  /* ROUTING SIDE */
+  depDetails(dept:Department){
+    if(dept==null)
+      this.router.navigate(['../Maintenance', {outlets: {'mroute': ['DepartmentsNew']}}]);
+    else
+      this.router.navigate(['../Maintenance', {outlets: {'mroute': ['DepartmentsEdit',dept.DepartmentID]}}]);
   };
 
-  depDelete(){
-    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['Departments-Delete']}}])
+  depDelete(dept:Department){
+    this.router.navigate(['../Maintenance', {outlets: {'mroute': ['DepartmentsDelete',dept.DepartmentID]}}]);
   };
+  /* FUNCTIONALITY SIDE */
+  constructor(private router:Router,private deptSvc: DepartmentService) { }
 
-  constructor(private router:Router) { }
-
-  ngOnInit() {
+  async ngOnInit() {
+    await this.getDependencies();
   }
 
+  async getDependencies(){
+    this.departments = <Department[]> await this.deptSvc.getDepartments();
+  }
 }
