@@ -15,10 +15,10 @@ namespace BW.Controllers.FrontendControllers
 
     // GET: api/FEMapCodes
     [HttpGet]
-    public async Task<IEnumerable<PP_Category>> Get()
+    public async Task<IEnumerable<PP_MapCode>> Get()
     {
       _providers = new Providers(HttpContext.Session.GetString("authorizationToken"));
-      return await _providers.categories.Get();
+      return await _providers.mapcodes.Get();
     }
 
     // GET: api/FEMapCodes/5

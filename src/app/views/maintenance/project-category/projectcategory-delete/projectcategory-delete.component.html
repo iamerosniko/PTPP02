@@ -18,19 +18,13 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h5><i class="fa fa-question-circle"></i>&nbsp;Delete this Project Category</h5>
-            <p>{{app.AppName}}</p>
+            <p>{{category.Category}}</p>
           </div>
-          <div *ngIf="app" class="panel-body">
+          <div *ngIf="category" class="panel-body">
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
-                <label>Application Name</label>
-                <p>{{app.AppName}}</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                <label>Application Member Name</label>
-                <p>{{app.AppMemberName}}</p>
+                <label>Project Category</label>
+                <p>{{category.Category}}</p>
               </div>
             </div>
             <div class="row">

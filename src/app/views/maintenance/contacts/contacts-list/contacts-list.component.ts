@@ -21,7 +21,7 @@ export class ContactsListComponent implements OnInit {
     this.router.navigate(['../Maintenance', {outlets: {'mroute':['ContactsDelete',con.ContactID]}}])
   }
 
-    constructor(private router:Router,private conSvc: ContactService) { }
+  constructor(private router:Router,private conSvc: ContactService) { }
 
   async ngOnInit() {
     await this.getDependencies();

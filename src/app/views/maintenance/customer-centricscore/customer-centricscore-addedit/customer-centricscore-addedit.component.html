@@ -7,30 +7,33 @@
     <!--return button-->
     <div class="row">
       <a href="#" id="btnGoBack" (click)="cuscenBack()" class="btn btn-default btn-sm" data-toggle="tab" data-target="#dep_default"><i class="fa fa-chevron-left"></i>&nbsp;Go Back</a>
-      <a (click)="saveDepartment()" class="btn btn-primary btn-sm" ><i class="fa fa-save"></i>&nbsp;Save</a>
+      <button (click)="save()" [disabled]="centricScoreForm.status=='INVALID'" class="btn btn-primary btn-sm" ><i class="fa fa-save"></i>&nbsp;Save</button>
     </div>
     <br />
     <!--header-->
     <div class="row">
       <!--for example you are in adding mode, span.add should be displayed while span.edit will be hidden-->
       <h4>
-        <span class="add" ><i class="fa fa-plus"></i>&nbsp;New Record</span>
-        <span class="edit"><i class="fa fa-edit"></i>&nbsp;Edit Details</span>
+        <span *ngIf="formState=='New'" class="add" ><i class="fa fa-plus"></i>&nbsp;New Record</span>
+        <span *ngIf="formState!='New'" class="edit"><i class="fa fa-edit"></i>&nbsp;Edit Details</span>
       </h4>
     </div>
     <br />
     <!--fields-->
     <div class="row">
-      <label class="col-md-2 control-label">Score</label>
-      <div class="col-md-4">
-        <input type="text" maxlength="100" class="form-control input-sm" />
-      </div>
-    </div>
-    <div class="row">
-        <label class="col-md-2 control-label">Description</label>
-        <div class="col-md-4">
-          <input type="text" maxlength="100" class="form-control input-sm" />
+      <form [formGroup]="centricScoreForm" (ngSubmit)="save()" >
+        <div class=" col-md-10">
+          <div class="form-group">
+              <label class="control-label">Score</label>
+              <input type="text" maxlength="100" class="form-control input-sm" formControlName="Score"/>
+          </div>
         </div>
-      </div>
+        <div class=" col-md-10">
+            <div class="form-group">
+                <label class="control-label">Description</label>
+                <input type="text" maxlength="100" class="form-control input-sm" formControlName="ScoreDesc"/>
+            </div>
+        </div>
+      </form>	
     <br />
   </div>

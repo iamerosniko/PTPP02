@@ -14,23 +14,17 @@
     </div>
     <br />
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-6 col-md-offset-2">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h5><i class="fa fa-question-circle"></i>&nbsp;Delete this Customer Map Code</h5>
-            <p>{{app.AppName}}</p>
+            <p>{{mapCode.MapCode}}</p>
           </div>
-          <div *ngIf="app" class="panel-body">
+          <div *ngIf="mapCode" class="panel-body">
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
-                <label>Application Name</label>
-                <p>{{app.AppName}}</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                <label>Application Member Name</label>
-                <p>{{app.AppMemberName}}</p>
+                <label>Map Code</label>
+                <p>{{mapCode.MapCode}}</p>
               </div>
             </div>
             <div class="row">
