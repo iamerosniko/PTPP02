@@ -24,7 +24,7 @@ export class CustomerMapcodeAddeditComponent implements OnInit {
 
   ngOnInit() {
     this.router.url.includes("New") ? this.formState ="New" : this.formState = "Edit";
-    this.mapCodeID = this.activatedRoute.snapshot.params['contactsID'];
+    this.mapCodeID = this.activatedRoute.snapshot.params['mapID'];
     this.mapCodeID!=null ? this.getDependencies() : null;
     this.mapCode.GroupName='JHSS';
     this.mapCodeForm = this.fb.group({

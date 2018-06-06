@@ -9,6 +9,7 @@ namespace BW.Provider
     public PContacts contacts { get; set; }
     public Providers(string bearer)
     {
+
       mapcodes = new PMapCodes(bearer);
       departments = new PDepartments(bearer);
       categories = new PCategories(bearer);

@@ -22,11 +22,9 @@
     <!--fields-->
     <div class="row">
       <form [formGroup]="contactForm" (ngSubmit)="save()" >
-        <div class=" col-md-10">
-          <div class="form-group">
+        <div class="form-group col-md-10">
               <label class="control-label">Given Name</label>
               <input type="text" maxlength="100" class="form-control input-sm" formControlName="ContactName"/>
-          </div>
         </div>
         <div class=" col-md-10">
             <div class="form-group">
