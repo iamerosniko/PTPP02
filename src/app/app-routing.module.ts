@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, RouterOutlet } from '@angular/router';
 
 import { MaintenanceComponent,MaintestComponent, DepartmentListComponent, ProjectcategoryListComponent, CustomerMapcodeListComponent, CustomerCentricscoreListComponent, ContactsListComponent, DepartmentAddeditComponent, DepartmentDeleteComponent, ProjectcategoryDeleteComponent, ProjectcategoryAddeditComponent, CustomerMapcodeAddeditComponent, CustomerCentricscoreAddeditComponent, ContactsAddeditComponent, CustomerMapcodeDeleteComponent, CustomerCentricscoreDeleteComponent, ContactsDeleteComponent } from './views/maintenance/maintenance'
-import { MainComponent } from './views/main/main'
+import { MainComponent,MainAddeditComponent,MainDeleteComponent } from './views/main/main'
 import { SearchComponent } from './views/search/search'
 import { ReportsComponent } from './views/reports/reports'
 const routes: Routes = [
@@ -41,7 +41,13 @@ const routes: Routes = [
     path:'Search',component:SearchComponent,
   },
   {
-    path:'Main',component:MainComponent
+    path:'Main',component:MainComponent,
+  },
+  {
+    path: 'Main/MainNew', component: MainAddeditComponent
+  },
+  {
+    path: 'Main/MainDelete', component: MainDeleteComponent
   },
   {
     path:'Reports',component:ReportsComponent,

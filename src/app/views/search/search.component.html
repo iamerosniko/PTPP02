@@ -8,53 +8,54 @@
       </div>
     </div>
 
-    <div id="center" class="container col-md-12">
-      <div id="item1" class="col-md-12">
+    <div class="row">
+    <div id="center" class="col-md-3">
+      <!-- <div id="item1" class="col-md-12"> -->
         <div class="col-md-12">
           <div id="boditems" class="row">
             <div class="col-md-12">
-              <label class="col-md-2 control-label">Owner</label>
-              <div class="col-md-3 input-group">
+              <label class="control-label">Owner</label>
+              <div class="col-md-12 input-group">
                 <select type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" >Select Owner</select>
               </div>
             </div>
           </div>
           <div id="boditems" class="row">
             <div class="col-md-12">
-              <label class="col-md-2 control-label">Project Manager</label>
-              <div class="col-md-3 input-group">
+              <label class="control-label">Project Manager</label>
+              <div class="col-md-12 input-group">
                   <select type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" >Select Project Manager</select>
               </div>
             </div>
           </div>
           <div id="boditems" class="row">
             <div class="col-md-12">
-              <label class="col-md-2 control-label">Department</label>
-              <div class="col-md-3 input-group">
+              <label class="control-label">Department</label>
+              <div class="col-md-12 input-group">
                   <select type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" >Select Department</select>
               </div>
             </div>
           </div>
           <div id="boditems" class="row">
             <div class="col-md-12">
-              <label class="col-md-2 control-label">Project Category</label>
-              <div class="col-md-3 input-group">
+              <label class="control-label">Project Category</label>
+              <div class="col-md-12 input-group">
                   <select type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" >Select Project Category</select>
               </div>
             </div>
           </div>
           <div id="boditems" class="row">
             <div class="col-md-12">
-              <label class="col-md-2 control-label">Status</label>
-              <div class="col-md-3 input-group">
+              <label class="control-label">Status</label>
+              <div class="col-md-12 input-group">
                   <select type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" >Select Status</select>
               </div>
             </div>
           </div>
           <div id="boditems" class="row">
             <div class="col-md-12">
-              <label class="col-md-2 control-label">Start Date</label>
-              <div class="col-md-3 input-group">
+              <label class="control-label">Start Date</label>
+              <div class="col-md-12 input-group">
                 <div class="input-group">
                     <input type="date" maxlength="100" class="form-control input-sm" />
                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -68,8 +69,8 @@
           </div>
           <div id="boditems" class="row">
             <div class="col-md-12">
-              <label class="col-md-2 control-label">End Date</label>
-              <div class="col-md-3 input-group">
+              <label class="control-label">End Date</label>
+              <div class="col-md-12 input-group">
                 <div id="calendar" class="input-group">
                     <input type="date" maxlength="100" class="form-control input-sm" />
                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -83,13 +84,101 @@
           </div>
           <div class="row">
             <div id="boditems" class="col-md-12">
-              <div id="searchbtn" class="col-md-5 input-group">
+              <div id="searchbtn" class="pull-right">
                 <a (click)="search()" class="btn btn-primary btn-sm">Search&nbsp;<i class="fa fa-search"></i></a>
               </div>
             </div>
           </div>
         </div>
+      <!-- </div> -->
+    </div>
+    <div id="divider" class="col-md-9">
+      <div id="table" class="row">
+        <div class="table-responsive">
+        
+          <table class="table table-bordered table-striped table-hover input-sm">
+            <thead>
+              <tr>
+                <th>Project Sponsor</th>
+                <th>Project Manager</th>
+                <th>Department</th>
+                <th>Project Category</th>
+                <th>Status</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Actions</th>
+                <!--
+                <th>Department</th>
+                <th>Project Category</th>
+                <th>Project Number</th>
+                <th>Customer Map Code</th>
+                <th>Customer Centric Score</th>
+                <th>Status</th>
+                <th>Project Sponsor</th>
+                <th>Project Target Date</th>
+                <th>Task Completed</th>
+                <th>Task in Progress</th>
+                <th>Upcoming Tasks</th>
+                <th>Date Added</th>
+                <th>Project Overview</th>
+                <th>Project Manager</th>
+                <th>Project Stakeholder</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Previous End Date</th>
+                <th>Comments</th>-->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>
+                    <div class="btn-group">
+                        <a (click)="mainDetails()"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="More Details"><i class="fa fa-search-plus"></i></a>
+                      <a (click)="mainDetails()"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
+                      <a (click)="mainDelete()" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
+                    </div>
+                  </td>
+                  <!-- <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td> -->
+              </tr>
+              <!--<tr *ngFor="let pc of categories">
+                 <td><a (click)="procatDetails(pc)">{{pc.Category}}</a></td>						
+                <td>
+                  <div class="btn-group">
+                    <a (click)="procatDetails(pc)"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
+                    <a (click)="procatDelete(pc)" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
+                  </div>
+                </td> 
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+        <!-- <div *ngIf="departments.length==0 && loading==false"> -->
+          <!-- No Departments Found -->
+        <!-- </div> -->
+        <!-- <div *ngIf="departments.length==0 && loading==true"> -->
+          <!-- Getting Departments -->
+          <!-- <span class="fa fa-cog fa-spin fa-3x fa-fw col-md-offset-4 col-md-1 "></span> -->
+        <!-- </div> -->
       </div>
+    </div>
     </div>
 
   </div>

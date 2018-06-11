@@ -1,6 +1,6 @@
-#center{
+/* #center{
     padding-left: 450px 
-}
+} */
 /* @media screen and (min-width: 50vw){
     #center{
         padding-left: none;
@@ -19,7 +19,7 @@
 
 #searchbtn{
     margin-top: 3px;
-    margin-left: 35%;
+    /* margin-right: 25%; */
 }
 #boditems{
     margin-bottom: 5px;
@@ -31,3 +31,9 @@
 #div{
     border: 1px black solid;
 }
+#table{
+    margin-right: 10px;
+}
+/* #divider{
+    border-left: solid 1px #2196F3;
+} */

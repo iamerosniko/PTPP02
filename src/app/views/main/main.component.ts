@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  constructor() { }
+  mainDetails(){
+    this.router.navigate(['../Main/MainNew'])
+  }
+  mainDelete(){
+    this.router.navigate(['../Main/MainDelete'])
+  }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
