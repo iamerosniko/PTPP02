@@ -1,30 +1,32 @@
 <!-- <div id="dep_default" class="tab-pane fade in active"> -->
     <div class="col-md-12">
-        <div class="row col-md-12">
-            <h3>Main</h3>
-            <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -45px; " />
+      <div class="row col-md-12">
+        <h3>Main</h3>
+        <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -45px; " />
       </div>
       <!--tool bar-->
-      <div class="container">
-      <div>
-        <a href="#" (click)="mainDetails()" class="btn btn-primary btn-sm" data-toggle="tab" data-target="#dep_editor"><i class="fa fa-plus"></i>&nbsp;New Record</a>
+      
+      <div id="banner" class="row col-md-2">
+        <a href="#" (click)="mainDetails()" id="button" class="btn btn-primary btn-sm pull-right" data-toggle="tab" data-target="#dep_editor"><i class="fa fa-plus"></i>&nbsp;New Record</a>
       </div>
       <br />
       <!--table-->
-      <div class="row container">
+      <div class="container">
+      <div class="row container col-md-12">
         <div class="table-responsive">
         
-          <table class="table table-bordered table-striped table-hover input-sm">
+          <table id="table" class="table table-bordered table-striped table-hover input-sm">
             <thead>
               <tr>
-                <th>Project Sponsor</th>
-                <th>Project Manager</th>
-                <th>Department</th>
-                <th>Project Category</th>
-                <th>Status</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Actions</th>
+                <th style="width: 10%;">Project Number</th>
+                <th style="width: 15%;">Project Sponsor</th>
+                <th style="width: 15%;">Project Manager</th>
+                <th style="width: 10%;">Department</th>
+                <th style="width: 12%;">Project Category</th>
+                <th style="width: 10%;">Status</th>
+                <th style="width: 10%;">Start Date</th>
+                <th style="width: 10%;">End Date</th>
+                <th style="width: 8%;">Actions</th>
                 <!--
                 <th>Department</th>
                 <th>Project Category</th>
@@ -56,9 +58,10 @@
                   <td>5</td>
                   <td>6</td>
                   <td>7</td>
-                  <td>
+                  <td>8</td>
+                  <td align="center">
                     <div class="btn-group">
-                        <a (click)="mainDetails()"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="More Details"><i class="fa fa-search-plus"></i></a>
+                      <a (click)="mainDetails()"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="More Details"><i class="fa fa-search-plus"></i></a>
                       <a (click)="mainDetails()"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
                       <a (click)="mainDelete()" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
                     </div>

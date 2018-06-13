@@ -138,36 +138,38 @@
                             <table class="table table-bordered table-striped table-hover input-sm">
                               <thead>
                                 <tr>
-                                  <th>Date Created</th>
-                                  <th>Full Name</th>
-                                  <th>Comment</th>
+                                  <th class="col-md-2">Date Created</th>
+                                  <th class="col-md-2">Full Name</th>
+                                  <th class="col-md-8">Comment</th>
                                 </tr>
+                                <!-- style="width: 60%;"> -->
                               </thead>
                               <tbody>
                                 <tr>
                                   <td></td>
                                   <td></td>
-                                  <td></td>
+                                  <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</td>
                                 </tr>
                               </tbody>
                             </table>
                           </div>
-                          <textarea id="textarea" type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" placeholder="Add Comment"></textarea>
+                          <textarea id="comments" type="text" maxlength="100" class="form-control ng-untouched ng-pristine ng-valid" placeholder="Add Comment"></textarea>
                   </div>
                   
                   
-                  <div class="row">
-                    <div id="boditems" class="col-md-12">
-                      <div class="col-md-2 input-group pull-right">
-                        <a id="searchbtn" (click)="save()" class="btn btn-primary btn-sm pull-right">Save&nbsp;<i class="fa fa-save"></i></a>
-                        <a href="#" id="btnGoBack" (click)="mainBack()" class="btn btn-default btn-sm" data-toggle="tab" data-target="#dep_default"><i class="fa fa-chevron-left"></i>&nbsp;Go Back</a>
-                      </div>
-                    </div>
-                  </div>
+                  
               </div>
             </div>
             
         </div>
+        <div class="row">
+            <div id="buttons" class=" col-md-2 pull-right">
+              <div id="buttongroup" class="col-md-10 input-group">
+                <a id="searchbtn" (click)="save()" class="btn btn-primary btn-sm pull-right">Save&nbsp;<i class="fa fa-save"></i></a>
+                <a href="#" id="btnGoBack" (click)="mainBack()" class="btn btn-default btn-sm" data-toggle="tab" data-target="#dep_default"><i class="fa fa-chevron-left"></i>&nbsp;Go Back</a>
+              </div>
+            </div>
+          </div>
     
       <!-- </div> -->
     </div>

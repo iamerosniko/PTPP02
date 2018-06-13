@@ -6,11 +6,12 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-md-1"></div>
         <!--nav pills-->
-        <div class="col-md-3">
+        <div id="sidebanner" class="col-md-2">
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li role="presentation" ><a href="#menu1" data-toggle="tab"><i class="fa fa-table"></i>&nbsp;Main Table</a></li> -->
-                <li [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['./', {outlets: {'mroute': ['Departments']}}]"><i class="fa fa-institution"></i>&nbsp;Department</a></li>
+                <li style="margin-top: 15px" [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['./', {outlets: {'mroute': ['Departments']}}]"><i class="fa fa-institution"></i>&nbsp;Department</a></li>
                 <li [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['./', {outlets: {'mroute': ['ProjectCategories']}}]"><i class="fa fa-qrcode"></i>&nbsp;Project Category</a></li>
                 <li [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['./', {outlets: {'mroute': ['CustomerMaps']}}]"><i class="fa fa-map-signs"></i>&nbsp;Customer Map Code</a></li>
                 <li [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['./', {outlets: {'mroute': ['CustomerCentrics']}}]"><i class="fa fa-balance-scale"></i>&nbsp;Customer Centric Score</a></li>

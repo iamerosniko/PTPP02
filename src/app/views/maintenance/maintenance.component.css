@@ -1,0 +1,14 @@
+#sidebanner{
+    background: rgba(20, 110, 175, 0.3);
+    /* border-radius: 10px; */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: -75px;
+    margin-top: -20px;
+    /* padding-top: -50px */
+}
+li{
+    margin-right: -5px;
+}

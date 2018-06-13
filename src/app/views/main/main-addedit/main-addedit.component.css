@@ -14,3 +14,24 @@
     min-height: 50px;
     resize: none
 }
+#comments{
+    max-height: 50px;
+    min-height: 50px;
+    resize: none;
+    margin-top: 5px;
+}
+#buttons{
+    margin-bottom: 10px;
+    background: rgba(20, 110, 175, 0.3);
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 0;
+    margin-left: 75px
+}
+#buttongroup{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 25px
+}
