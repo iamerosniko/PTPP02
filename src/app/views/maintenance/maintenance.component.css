@@ -1,34 +1,44 @@
-#sidebanner{
+/* #sidebannner{ */
+#deptaab{
     background: rgba(10, 120, 200, 0.3);
     /* border-radius: 10px; */
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin-left: -75px;
-    margin-top: -20px;
+    margin-left: -20px;
+    /* margin-top: -20px; */
+    /* border-bottom:  1px solid rgba(0, 120, 200, 0.5);
+    border-right:  1px solid rgba(0, 120, 200, 0.5);
+    border-left:  1px solid rgba(0, 120, 200, 0.5); */
     /* margin-right: 10px */
     /* padding-top: -50px */
+    /* font: medium bold; */
 }
-#deptab{
-    margin-right: -5px;
-    margin-left: -5px;
-    margin-top: 25px
-}
-#protab{
-    margin-right: -5px;
-    margin-left: -5px;
-}
-#cmctab{
+/* #deptab:hover{
+    background: #0a78c8 ;
+    
+} */
+#protaba{
     margin-right: -5px;
     margin-left: -5px;
 }
-#ccstab{
+#cmctaba{
     margin-right: -5px;
     margin-left: -5px;
 }
-#contab{
+#ccstaba{
+    margin-right: -5px;
+    /* margin-left: -5px; */
+}
+#contaba{
     margin-right: -5px;
     margin-left: -5px;
     margin-bottom: -5px
 }
+li{
+    margin-right: -5px;
+}
+/* ul::selection{
+    background: rgba(20, 110, 175, 0.3);
+} */

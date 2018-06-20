@@ -9,7 +9,10 @@ import { Router, Routes, ActivatedRoute, Route } from '@angular/router';
 export class SearchDetailsComponent implements OnInit {
 
   searchDetails(){
-    this.router.navigate(['../Search/MainDetails'])
+    this.router.navigate(['../Search/SearchDetails'])
+  }
+  searchBack(){
+    this.router.navigate(['../Search'])
   }
   constructor(private router:Router) { }
 

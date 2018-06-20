@@ -18,14 +18,17 @@
     background: rgba(20, 110, 175, 0.3);
     /* border-radius: 10px; */
     border-top-left-radius: 0;
-    border-top-right-radius: 10px;
+    border-top-right-radius: 0px;
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 0px;
     margin-bottom: 10px;
+    border-top: solid 5px rgb(20, 110, 175);
+    
 }
 #button{
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-right: -8px;
 }
 
 #table{

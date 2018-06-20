@@ -1,6 +1,8 @@
 #boditems{
     margin-bottom: 10px;
     /* margin-left: -20px */
+    /* max-width: 315px; */
+    min-width: 315px;
 }
 #table{
     /* border-right: 1px solid #2196F3; */
@@ -12,26 +14,37 @@
 #textarea{
     max-height: 50px;
     min-height: 50px;
-    resize: none
+    resize: none;
+    margin-bottom: 10px;
+    /* min-width: 300px; */
 }
 #comments{
     max-height: 50px;
     min-height: 50px;
     resize: none;
     margin-top: 5px;
+    margin-bottom: 10px;
 }
+/* .input-group{
+    min-width: 315px;
+} */
 #buttons{
     margin-bottom: 10px;
     background: rgba(20, 110, 175, 0.3);
     /* border-radius: 10px; */
-    border-top-left-radius: 10px;
+    /* border-top-left-radius: 10px;
     border-top-right-radius: 0;
     border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0; */
+    border-top: solid 5px rgb(20, 110, 175);
     margin-left: 75px
 }
 #buttongroup{
     margin-top: 5px;
     margin-bottom: 5px;
     padding-right: 25px
+}
+.items1{
+    /* max-width: 300px; */
+    min-width: 300px;
 }
