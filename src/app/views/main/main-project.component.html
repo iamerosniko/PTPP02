@@ -1,0 +1,130 @@
+<!-- <div id="dep_default" class="tab-pane fade in active"> -->
+    <div class="col-md-12">
+      <div class="row col-md-12">
+        <h3>Main</h3>
+        <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -45px; " />
+      </div>
+      <!--tool bar-->
+      
+      <div id="banner" class="row col-md-2">
+        <a href="#" (click)="mainDetails()" id="button" class="btn btn-primary btn-sm pull-right" data-toggle="tab" data-target="#dep_editor"><i class="fa fa-plus"></i>&nbsp;New Record</a>
+      </div>
+      <br />
+      <!--table-->
+      <div class="container">
+      <div class="row container col-md-12">
+        <div class="table-responsive">
+        
+          <table id="table" class="table table-bordered table-striped table-hover input-sm">
+            <thead>
+              <tr>
+                <th style="width: 10%;">Project Number</th>
+                <th style="width: 15%;">Project Sponsor</th>
+                <th style="width: 15%;">Project Manager</th>
+                <th style="width: 10%;">Department</th>
+                <th style="width: 12%;">Project Category</th>
+                <th style="width: 10%;">Status</th>
+                <th style="width: 10%;">Start Date</th>
+                <th style="width: 10%;">End Date</th>
+                <th style="width: 8%;">Actions</th>
+                <!--
+                <th>Department</th>
+                <th>Project Category</th>
+                <th>Project Number</th>
+                <th>Customer Map Code</th>
+                <th>Customer Centric Score</th>
+                <th>Status</th>
+                <th>Project Sponsor</th>
+                <th>Project Target Date</th>
+                <th>Task Completed</th>
+                <th>Task in Progress</th>
+                <th>Upcoming Tasks</th>
+                <th>Date Added</th>
+                <th>Project Overview</th>
+                <th>Project Manager</th>
+                <th>Project Stakeholder</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Previous End Date</th>
+                <th>Comments</th>-->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>Test_JGA - Project Number</td>
+                  <td>Test_JGA - Project Sponsor</td>
+                  <td>Test_JGA - Project Manager</td>
+                  <td>Test_JGA - Department</td>
+                  <td>Test_JGA - Project Category</td>
+                  <td>Test_JGA - Status</td>
+                  <td>06/18/2018</td>
+                  <td>01/18/2019</td>
+                  <td align="center">
+                    <div class="btn-group">
+                      <a (click)="mainDetails()"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="More Details"><i class="fa fa-search-plus"></i></a>
+                      <a (click)="mainDetails()"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
+                      <a (click)="mainDelete()" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
+                    </div>
+                  </td>
+                  <!-- <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td> -->
+              </tr>
+              <!--<tr *ngFor="let pc of categories">
+                 <td><a (click)="procatDetails(pc)">{{pc.Category}}</a></td>						
+                <td>
+                  <div class="btn-group">
+                    <a (click)="procatDetails(pc)"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
+                    <a (click)="procatDelete(pc)" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
+                  </div>
+                </td> 
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+        <!-- <div *ngIf="departments.length==0 && loading==false"> -->
+          <!-- No Departments Found -->
+        <!-- </div> -->
+        <!-- <div *ngIf="departments.length==0 && loading==true"> -->
+          <!-- Getting Departments -->
+          <!-- <span class="fa fa-cog fa-spin fa-3x fa-fw col-md-offset-4 col-md-1 "></span> -->
+        <!-- </div> -->
+      </div>
+      <!--pagination-->
+      <div class="row">
+        <div class="pull-right">
+          <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls>  -->
+        </div>
+      </div>
+    </div>
+    </div>
+      <!-- </div> -->
+
+      <div class="content-section implementation">
+        <p-table [columns]="cols" [value]="cars" [lazy]="true" (onLazyLoad)="loadCarsLazy($event)" 
+            [paginator]="true" [rows]="10" [totalRecords]="totalRecords" [loading]="loading">
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th *ngFor="let col of columns">
+                        {{col.header}}
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr>
+                    <td *ngFor="let col of columns">
+                        {{rowData[col.field]}}
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module'
 import { MaintenanceModule } from './views/maintenance/maintenance.module'
-import { MainModule } from './views/main/main.module'
+import { MainProjectModule } from './views/main/main-project.module'
 import { ReportsModule } from './views/reports/reports.module'
 import { SearchModule } from './views/search/search.module'
 
@@ -21,7 +21,7 @@ import { AppComponent } from './app.component';
     AppComponent,TopNavComponent
   ],
   imports: [
-    HttpModule,BrowserModule,MaintenanceModule,MainModule,ReportsModule,SearchModule,AppRoutingModule
+    HttpModule,BrowserModule,MaintenanceModule,MainProjectModule,ReportsModule,SearchModule,AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

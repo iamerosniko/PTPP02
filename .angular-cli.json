@@ -22,8 +22,8 @@
         "assets/css/ng2-select.css",
         "assets/css/font-awesome-4.7.0/css/font-awesome.css",
     		"assets/css/Checkboxes.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "../node_modules/bootstrap/dist/css/bootstrap-theme.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
         "assets/css/Site.css",
         "assets/css/googleicon.css"
       ],
