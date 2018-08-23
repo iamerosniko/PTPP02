@@ -7,7 +7,9 @@ import { Router, Routes, ActivatedRoute, Route } from '@angular/router';
   styleUrls: ['./search-details.component.css']
 })
 export class SearchDetailsComponent implements OnInit {
-
+  searchTasks(){
+    this.router.navigate(['../Search/SearchTasks'])
+  }
   searchDetails(){
     this.router.navigate(['../Search/SearchDetails'])
   }

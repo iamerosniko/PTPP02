@@ -6,13 +6,16 @@
       </div>
       <!--tool bar-->
       
-      <div id="banner" class="row col-md-2">
-        <a href="#" (click)="mainDetails()" id="button" class="btn btn-primary btn-sm pull-right" data-toggle="tab" data-target="#dep_editor"><i class="fa fa-plus"></i>&nbsp;New Record</a>
+      <div id="banner" class="row col-md-12">
+        <div class="col-md-2">
+          <a href="#" (click)="mainDetails()" id="button" class="btn btn-primary btn-sm" data-toggle="tab" data-target="#dep_editor"><i class="fa fa-plus"></i>&nbsp;New Record</a>
+        </div>
+        <div class="col-md-10"></div>
       </div>
       <br />
       <!--table-->
-      <div class="container">
-      <div class="row container col-md-12">
+      <div class="row col-md-12">
+      <div class="col-md-12">
         <div class="table-responsive">
         
           <table id="table" class="table table-bordered table-striped table-hover input-sm">

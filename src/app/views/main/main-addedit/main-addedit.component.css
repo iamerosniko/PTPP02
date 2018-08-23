@@ -2,14 +2,21 @@
     margin-bottom: 10px;
     /* margin-left: -20px */
     /* max-width: 315px; */
-    min-width: 315px;
+    /* min-width: 315px; */
+}
+#sidepanel{
+    /* border-right: 1px solid #2196F3; */
+    /* position: fixed; */
+    overflow-y: scroll;
+    max-height: 625px;
+    /* margin: auto -15px; */
 }
 #table{
     /* border-right: 1px solid #2196F3; */
     /* position: fixed; */
     overflow-y: scroll;
-    max-height: 125px;
-    min-height: 125px;
+    max-height: 200px;
+    min-height: 200px;
 }
 #textarea{
     max-height: 50px;
@@ -28,8 +35,8 @@
 /* .input-group{
     min-width: 315px;
 } */
-#buttons{
-    margin-bottom: 10px;
+#buttonsaaa{
+    /* margin-bottom: 10px; */
     background: rgba(20, 110, 175, 0.3);
     /* border-radius: 10px; */
     /* border-top-left-radius: 10px;
@@ -37,14 +44,19 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 0; */
     border-top: solid 5px rgb(20, 110, 175);
-    margin-left: 75px
+    /* margin-left: 75px */
 }
-#buttongroup{
+#buttongroupaaa{
     margin-top: 5px;
     margin-bottom: 5px;
     padding-right: 25px
 }
-.items1{
+#items1{
     /* max-width: 300px; */
     min-width: 300px;
+    overflow-y: scroll;
+    max-height: 625px;
+}
+#tables{
+    margin: 10px;
 }

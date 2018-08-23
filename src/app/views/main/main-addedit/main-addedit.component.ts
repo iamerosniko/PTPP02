@@ -10,6 +10,9 @@ export class MainAddeditComponent implements OnInit {
   mainBack(){
     this.router.navigate(['../Main'])
   }
+  save(){
+    this.router.navigate(['../Main/MainTasks'])
+  }
   constructor(private router:Router) { }
 
   ngOnInit() {
