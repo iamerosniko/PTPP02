@@ -2,8 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, RouterOutlet } from '@angular/router';
 
 import { MaintenanceComponent,MaintestComponent, DepartmentListComponent, ProjectcategoryListComponent, CustomerMapcodeListComponent, CustomerCentricscoreListComponent, ContactsListComponent, DepartmentAddeditComponent, DepartmentDeleteComponent, ProjectcategoryDeleteComponent, ProjectcategoryAddeditComponent, CustomerMapcodeAddeditComponent, CustomerCentricscoreAddeditComponent, ContactsAddeditComponent, CustomerMapcodeDeleteComponent, CustomerCentricscoreDeleteComponent, ContactsDeleteComponent } from './views/maintenance/maintenance'
+<<<<<<< HEAD
 import { MainComponent,MainAddeditComponent,MainDeleteComponent,MainTasksComponent } from './views/main/main'
 import { SearchComponent, SearchDetailsComponent, SearchTasksComponent } from './views/search/search'
+=======
+import { MainProjectComponent,MainAddeditComponent,MainDeleteComponent } from './views/main/main-project'
+import { SearchComponent, SearchDetailsComponent } from './views/search/search'
+>>>>>>> e14eea0bd1154ca0ba4ec9b261602839f56f22ab
 import { ReportsComponent } from './views/reports/reports'
 const routes: Routes = [
   { 
@@ -44,10 +49,14 @@ const routes: Routes = [
     path:'Search/SearchDetails',component:SearchDetailsComponent,
   },
   {
+<<<<<<< HEAD
     path:'Search/SearchTasks',component:SearchTasksComponent,
   },
   {
     path:'Main',component:MainComponent,
+=======
+    path:'Main',component:MainProjectComponent,
+>>>>>>> e14eea0bd1154ca0ba4ec9b261602839f56f22ab
   },
   {
     path: 'Main/MainNew', component: MainAddeditComponent

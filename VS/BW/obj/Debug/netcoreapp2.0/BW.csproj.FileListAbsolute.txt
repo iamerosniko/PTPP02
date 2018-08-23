@@ -25,3 +25,17 @@ C:\Users\alverer\Documents\GitHub\PTPP02\VS\BW\bin\Debug\netcoreapp2.0\BW.dll
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\BW\bin\Debug\netcoreapp2.0\BW.pdb
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\BW\bin\Debug\netcoreapp2.0\API.dll
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\BW\bin\Debug\netcoreapp2.0\API.pdb
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\bin\Debug\netcoreapp2.0\BW.deps.json
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\bin\Debug\netcoreapp2.0\BW.runtimeconfig.json
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\bin\Debug\netcoreapp2.0\BW.runtimeconfig.dev.json
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\bin\Debug\netcoreapp2.0\BW.dll
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\bin\Debug\netcoreapp2.0\BW.pdb
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\bin\Debug\netcoreapp2.0\API.dll
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\bin\Debug\netcoreapp2.0\API.pdb
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\obj\Debug\netcoreapp2.0\BW.csprojResolveAssemblyReference.cache
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\obj\Debug\netcoreapp2.0\BW.csproj.CoreCompileInputs.cache
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\obj\Debug\netcoreapp2.0\BW.AssemblyInfoInputs.cache
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\obj\Debug\netcoreapp2.0\BW.AssemblyInfo.cs
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\obj\Debug\netcoreapp2.0\BW.csproj.CopyComplete
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\obj\Debug\netcoreapp2.0\BW.dll
+C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\BW\obj\Debug\netcoreapp2.0\BW.pdb
