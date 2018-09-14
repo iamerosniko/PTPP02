@@ -1,0 +1,43 @@
+<div class="col-md-12">
+    <div class="row col-md-12">
+        <h3>Main</h3>
+        <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -45px; " />
+  </div>
+  </div>
+  <div class="container-fluid" style="margin-top: 20px;">
+    <div class="row">
+      <div class="col-md-12">
+        <a class="btn btn-default btn-sm" (click)="mainBack()">
+          <i class="fa fa-caret-left"></i>
+          Back
+        </a>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5><i class="fa fa-question-circle"></i>&nbsp;Delete this Project</h5>
+            <p>{{category.Category}}</p>
+          </div>
+          <div *ngIf="category" class="panel-body">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <label>Project Category</label>
+                <p>{{category.Category}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <a class="btn btn-danger btn-sm pull-right" (click)="delete()">
+                  <i class="fa fa-trash"></i>
+                  Delete
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>Project Category</h2>
+    </div>
+  </div>
+  <div class="container-fluid" style="margin-top: 20px;">
+    <div class="row">
+      <div class="col-md-12">
+        <a class="btn btn-default btn-sm" (click)="procatBack()">
+          <i class="fa fa-caret-left"></i>
+          Back
+        </a>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h5><i class="fa fa-question-circle"></i>&nbsp;Delete this Project Category</h5>
+            <p>{{category.Category}}</p>
+          </div>
+          <div *ngIf="category" class="panel-body">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <label>Project Category</label>
+                <p>{{category.Category}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <a class="btn btn-danger btn-sm pull-right" (click)="delete()">
+                  <i class="fa fa-trash"></i>
+                  Delete
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
