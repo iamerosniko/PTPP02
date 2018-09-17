@@ -4,10 +4,10 @@ export interface Category {
     GroupName ?: string,
 }
 
-export interface ProjectContacts {
-    MainID ?: string,
-    Contacts ?: string,
-    Type ?:string,
+export interface CentricScore {
+    CentricScoreID ?: string,
+    Score ?: string,
+    ScoreDesc ?:string,
     GroupName ?: string,
 }
 
@@ -30,6 +30,23 @@ export interface Contact {
     GroupName ?: string,
 }
 
+export interface ProjectDependencies{
+    Contacts?: Contact[],
+    Departments?:Department[],
+    CentricScores?:CentricScore[],
+    MapCodes?:MapCode[],
+    Categories?:Category[]
+}
+
+
+
+export interface ProjectContacts {
+    MainID ?: string,
+    Contacts ?: string,
+    Type ?:string,
+    GroupName ?: string,
+}
+
 export interface Comment {
     MainID ?: string,
     DateCreated ?: Date,
@@ -38,12 +55,6 @@ export interface Comment {
     GroupName ?: string,
 }
 
-export interface CentricScore {
-    CentricScoreID ?: string,
-    Score ?: string,
-    ScoreDesc ?:string,
-    GroupName ?: string,
-}
 
 export interface Main {
     MainID ?: string,

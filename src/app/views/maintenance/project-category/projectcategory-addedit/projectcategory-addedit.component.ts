@@ -53,6 +53,7 @@ export class ProjectcategoryAddeditComponent implements OnInit {
     }
     else{
       result = <Category> await this.catSvc.putCategory(this.category);
+      result = result ==null ? await this.category : await result ;
     }
     console.log(result);
     if(result!=null)

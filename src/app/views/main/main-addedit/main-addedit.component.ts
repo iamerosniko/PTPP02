@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Routes, ActivatedRoute } from '@angular/router';
-
+import { ProjectDependenciesService } from '../../../services/services';
+import { Category,CentricScore,MapCode,Department,Contact,ProjectDependencies  } from '../../../entities/entities';
 @Component({
   selector: 'app-main-addedit',
   templateUrl: './main-addedit.component.html',
@@ -13,9 +14,10 @@ export class MainAddeditComponent implements OnInit {
   save(){
     this.router.navigate(['../Main/MainTasks'])
   }
-  constructor(private router:Router) { }
+  constructor(private router:Router, private pdSvc:ProjectDependenciesService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    console.log(await this.pdSvc.getDependencies());
   }
 
 }

@@ -5,11 +5,12 @@ import { MainProjectComponent } from './main-project.component';
 import { MainAddeditComponent } from './main-addedit/main-addedit.component';
 import { MainDeleteComponent } from './main-delete/main-delete.component';
 import { MainTasksComponent } from './main-tasks/main-tasks.component';
-
+import { ProjectDependenciesService } from '../../services/services';
 @NgModule({
   imports: [
     CommonModule,RouterModule
   ],
+  providers:[ProjectDependenciesService],
   // declarations: [MainComponent, MainAddeditComponent, MainDeleteComponent, MainTasksComponent]
   declarations: [MainProjectComponent, MainAddeditComponent, MainDeleteComponent, MainTasksComponent]
 })
