@@ -10,7 +10,7 @@ namespace API.Tables
   {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int MainID { get; set; }
+    public Guid MainID { get; set; }
     public DateTime DateCreated { get; set; }
     public string FullName { get; set; }
     public string Comment { get; set; }

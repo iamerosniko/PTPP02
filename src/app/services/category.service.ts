@@ -16,33 +16,33 @@ export class CategoryService {
 
   getCategories() {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FECategories")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Categories")
     return this.api.getAll();
   }
 
   getCategory(id: string) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FECategories")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Categories")
     return this.api.getOne(id);
   }
 
   postCategory(data: Category) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FECategories")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Categories")
     var body = JSON.stringify(data);
     return this.api.postData(body);
   } 
 
   putCategory(data: Category) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FECategories")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Categories")
     var body = JSON.stringify(data);
     return this.api.putData(data.CategoryID.toString(),body );
   }
 
   deleteCategory(id: string) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FECategories")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Categories")
     return this.api.deleteData(id);
   }
 }

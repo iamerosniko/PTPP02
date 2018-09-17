@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -8,7 +9,7 @@ namespace API.Tables
   {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int ContactID { get; set; }
+    public Guid ContactID { get; set; }
     public string ContactName { get; set; }
     public string LastName { get; set; }
     public string GroupName { get; set; }

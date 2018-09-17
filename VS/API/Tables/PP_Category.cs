@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +10,7 @@ namespace API.Tables
   {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int CategoryID { get; set; }
+    public Guid CategoryID { get; set; }
     public string Category { get; set; }
     public string GroupName { get; set; }
   }

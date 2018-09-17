@@ -14,7 +14,6 @@ C:\Users\alverer\Documents\GitHub\PTPP02\VS\API\bin\Debug\netcoreapp2.0\API.runt
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\API\bin\Debug\netcoreapp2.0\API.runtimeconfig.dev.json
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\API\bin\Debug\netcoreapp2.0\API.dll
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\API\bin\Debug\netcoreapp2.0\API.pdb
-C:\Users\alverer\Documents\GitHub\PTPP02\VS\API\obj\Debug\netcoreapp2.0\API.csprojResolveAssemblyReference.cache
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\API\obj\Debug\netcoreapp2.0\API.csproj.CoreCompileInputs.cache
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\API\obj\Debug\netcoreapp2.0\API.AssemblyInfoInputs.cache
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\API\obj\Debug\netcoreapp2.0\API.AssemblyInfo.cs
@@ -31,3 +30,4 @@ C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\API\obj\Debug\netcoreapp2.0\API.As
 C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\API\obj\Debug\netcoreapp2.0\API.AssemblyInfo.cs
 C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\API\obj\Debug\netcoreapp2.0\API.dll
 C:\Users\zEROSeven\Documents\GitHub\PTPP02\VS\API\obj\Debug\netcoreapp2.0\API.pdb
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\API\obj\Debug\netcoreapp2.0\API.csprojAssemblyReference.cache

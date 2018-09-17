@@ -16,33 +16,33 @@ export class DepartmentService {
 
   getDepartments() {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FEDepartments")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Departments")
     return this.api.getAll();
   }
 
   getDepartment(id: string) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FEDepartments")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Departments")
     return this.api.getOne(id);
   }
 
   postDepartment(data: Department) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FEDepartments")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Departments")
     var body = JSON.stringify(data);
     return this.api.postData(body);
   } 
 
   putDepartment(data: Department) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FEDepartments")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Departments")
     var body = JSON.stringify(data);
     return this.api.putData(data.DepartmentID.toString(),body );
   }
 
   deleteDepartment(id: string) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FEDepartments")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Departments")
     return this.api.deleteData(id);
   }
 }

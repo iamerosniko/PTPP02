@@ -16,33 +16,33 @@ export class CentricScoreService {
 
   getCentricScores() {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FECentricScores")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_CentricScores")
     return this.api.getAll();
   }
 
   getCentricScore(id: string) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FECentricScores")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_CentricScores")
     return this.api.getOne(id);
   }
 
   postCentricScore(data: CentricScore) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FECentricScores")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_CentricScores")
     var body = JSON.stringify(data);
     return this.api.postData(body);
   } 
 
   putCentricScore(data: CentricScore) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FECentricScores")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_CentricScores")
     var body = JSON.stringify(data);
     return this.api.putData(data.CentricScoreID.toString(),body );
   }
 
   deleteCentricScore(id: string) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FECentricScores")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_CentricScores")
     return this.api.deleteData(id);
   }
 }

@@ -17,12 +17,12 @@ namespace API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.0.3-rtm-10026")
+                .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("API.Tables.PP_Category", b =>
                 {
-                    b.Property<int>("CategoryID")
+                    b.Property<Guid>("CategoryID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Category");
@@ -36,12 +36,12 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Tables.PP_CentricScore", b =>
                 {
-                    b.Property<int>("CentricScoreID")
+                    b.Property<Guid>("CentricScoreID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("GroupName");
 
-                    b.Property<int>("Score");
+                    b.Property<string>("Score");
 
                     b.Property<string>("ScoreDesc");
 
@@ -52,7 +52,7 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Tables.PP_Comment", b =>
                 {
-                    b.Property<int>("MainID")
+                    b.Property<Guid>("MainID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Comment");
@@ -70,7 +70,7 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Tables.PP_Contact", b =>
                 {
-                    b.Property<int>("ContactID")
+                    b.Property<Guid>("ContactID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("ContactName");
@@ -86,7 +86,7 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Tables.PP_Department", b =>
                 {
-                    b.Property<int>("DepartmentID")
+                    b.Property<Guid>("DepartmentID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Department");
@@ -98,49 +98,9 @@ namespace API.Migrations
                     b.ToTable("PP_Departments");
                 });
 
-            modelBuilder.Entity("API.Tables.PP_Main", b =>
-                {
-                    b.Property<int>("MainID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("CategoryID");
-
-                    b.Property<int>("CentricScoreID");
-
-                    b.Property<DateTime>("DateAdded");
-
-                    b.Property<DateTime>("DateEnded");
-
-                    b.Property<DateTime>("DatePrevious");
-
-                    b.Property<DateTime>("DateStarted");
-
-                    b.Property<int>("DepartmentID");
-
-                    b.Property<string>("GroupName");
-
-                    b.Property<string>("MapCode");
-
-                    b.Property<string>("Overview");
-
-                    b.Property<string>("Status");
-
-                    b.Property<DateTime>("TargetDate");
-
-                    b.Property<int>("TaskCompleted");
-
-                    b.Property<int>("TaskInProgress");
-
-                    b.Property<int>("TaskUpcoming");
-
-                    b.HasKey("MainID");
-
-                    b.ToTable("PP_Main");
-                });
-
             modelBuilder.Entity("API.Tables.PP_MapCode", b =>
                 {
-                    b.Property<int>("MapCodeID")
+                    b.Property<Guid>("MapCodeID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("GroupName");
@@ -154,7 +114,7 @@ namespace API.Migrations
 
             modelBuilder.Entity("API.Tables.PP_ProjectContacts", b =>
                 {
-                    b.Property<int>("MainID")
+                    b.Property<Guid>("MainID")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Contacts");
@@ -166,6 +126,46 @@ namespace API.Migrations
                     b.HasKey("MainID");
 
                     b.ToTable("PP_ProjectContacts");
+                });
+
+            modelBuilder.Entity("API.Tables.PP_Projects", b =>
+                {
+                    b.Property<Guid>("ProjectID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid>("CustomerCentricScore");
+
+                    b.Property<string>("CustomerMapCode");
+
+                    b.Property<DateTime>("DateAdded");
+
+                    b.Property<Guid>("DepartmentID");
+
+                    b.Property<DateTime>("EndDate");
+
+                    b.Property<bool>("EndDateChanged");
+
+                    b.Property<Guid>("ProjectCategory");
+
+                    b.Property<Guid>("ProjectManager");
+
+                    b.Property<string>("ProjectNumber");
+
+                    b.Property<string>("ProjectOverview");
+
+                    b.Property<Guid>("ProjectSponsor");
+
+                    b.Property<Guid>("ProjectStakeHolder");
+
+                    b.Property<DateTime>("ProjectTargetDate");
+
+                    b.Property<DateTime>("StartDate");
+
+                    b.Property<Guid>("Status");
+
+                    b.HasKey("ProjectID");
+
+                    b.ToTable("PP_Project");
                 });
 #pragma warning restore 612, 618
         }

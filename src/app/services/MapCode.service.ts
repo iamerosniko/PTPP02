@@ -16,33 +16,33 @@ export class MapCodeService {
 
   getMapcodes() {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FEMapCodes")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_MapCodes")
     return this.api.getAll();
   }
 
   getMapcode(id: string) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FEMapCodes")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_MapCodes")
     return this.api.getOne(id);
   }
 
   postMapcode(data: MapCode) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FEMapCodes")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_MapCodes")
     var body = JSON.stringify(data);
     return this.api.postData(body);
   } 
 
   putMapcode(data: MapCode) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FEMapCodes")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_MapCodes")
     var body = JSON.stringify(data);
     return this.api.putData(data.MapCodeID.toString(),body );
   }
 
   deleteMapcode(id: string) {
     this.api.normalHeader();
-    this.api.apiUrl=ClientApiSettings.GETBWURL("FEMapCodes")
+    this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_MapCodes")
     return this.api.deleteData(id);
   }
 }
