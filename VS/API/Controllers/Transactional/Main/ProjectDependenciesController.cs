@@ -1,10 +1,12 @@
 using API.Models.Main;
 using API.Tables;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
 namespace API.Controllers.Transactional.Main
 {
+  [EnableCors("CORS")]
   [Produces("application/json")]
   [Route("api/ProjectDependencies")]
   public class ProjectDependenciesController : Controller

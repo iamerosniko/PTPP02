@@ -1,4 +1,5 @@
 using API.Tables;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace API.Controllers.Maintenance
 {
+  [EnableCors("CORS")]
   [Produces("application/json")]
   [Route("api/PP_Departments")]
   public class PP_DepartmentsController : Controller
