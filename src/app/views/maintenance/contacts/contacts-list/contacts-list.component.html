@@ -47,3 +47,30 @@
 		</div>
 	</div>
 </div>
+
+<p-table [value]="contacts" >
+    <ng-template pTemplate="header" let-columns>
+		<tr>
+			<th class="col-md-6">First Name</th>
+			<th class="col-md-5">Last Name</th>
+			<th class="col-md-1">Actions</th>
+		</tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="contacts">
+        <tr>
+            <td *ngFor="let col of contacts">
+            {{col.field}}
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="footer" let-columns>
+        <tr>
+            <td *ngFor="let col of contacts">
+            {{col.header}}
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        There are {{contacts?.length}} cars
+    </ng-template>
+</p-table>
