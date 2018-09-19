@@ -24,11 +24,11 @@ const routes: Routes = [
       { path: 'CustomerCentricsNew', component: CustomerCentricscoreAddeditComponent, outlet: 'mroute' },
       { path: 'ContactsNew', component: ContactsAddeditComponent, outlet: 'mroute' },
        // forms here Edit
-       { path: 'DepartmentsEdit/:departmentID', component: DepartmentAddeditComponent, outlet: 'mroute' },
-       { path: 'ProjectCategoriesEdit/:categoryID', component: ProjectcategoryAddeditComponent, outlet: 'mroute' },
-       { path: 'CustomerMapsEdit/:mapID', component: CustomerMapcodeAddeditComponent, outlet: 'mroute' },
-       { path: 'CustomerCentricsEdit/:centricScoreID', component: CustomerCentricscoreAddeditComponent, outlet: 'mroute' },
-       { path: 'ContactsEdit/:contactsID', component: ContactsAddeditComponent, outlet: 'mroute' },
+      { path: 'DepartmentsEdit/:departmentID', component: DepartmentAddeditComponent, outlet: 'mroute' },
+      { path: 'ProjectCategoriesEdit/:categoryID', component: ProjectcategoryAddeditComponent, outlet: 'mroute' },
+      { path: 'CustomerMapsEdit/:mapID', component: CustomerMapcodeAddeditComponent, outlet: 'mroute' },
+      { path: 'CustomerCentricsEdit/:centricScoreID', component: CustomerCentricscoreAddeditComponent, outlet: 'mroute' },
+      { path: 'ContactsEdit/:contactsID', component: ContactsAddeditComponent, outlet: 'mroute' },
       // delete area here
       { path: 'DepartmentsDelete/:departmentID', component: DepartmentDeleteComponent, outlet: 'mroute' },
       { path: 'ProjectCategoriesDelete/:categoryID', component: ProjectcategoryDeleteComponent, outlet: 'mroute' },
@@ -47,16 +47,16 @@ const routes: Routes = [
     path:'Search/SearchTasks',component:SearchTasksComponent,
   },
   {
-    path:'Main',component:MainProjectComponent,
+    path:'Projects',component:MainProjectComponent,
   },
   {
-    path: 'Main/MainNew', component: MainAddeditComponent
+    path: 'Projects/MainNew', component: MainAddeditComponent
   },
   {
-    path: 'Main/MainTasks', component: MainTasksComponent
+    path: 'Projects/MainTasks', component: MainTasksComponent
   },
   {
-    path: 'Main/MainDelete', component: MainDeleteComponent
+    path: 'Projects/MainDelete', component: MainDeleteComponent
   },
   {
     path:'Reports',component:ReportsComponent,

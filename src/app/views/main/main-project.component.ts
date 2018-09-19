@@ -7,10 +7,10 @@ import { Router } from '@angular/router';
 })
 export class MainProjectComponent  {
   mainDetails(){
-    this.router.navigate(['../Main/MainNew'])
+    this.router.navigate(['../Projects/MainNew'])
   }
   mainDelete(){
-    this.router.navigate(['../Main/MainDelete'])
+    this.router.navigate(['../Projects/MainDelete'])
   }
   constructor(private router:Router) { }
 

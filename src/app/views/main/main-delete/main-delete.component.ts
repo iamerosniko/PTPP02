@@ -8,7 +8,7 @@ import { Router, Routes, ActivatedRoute, Route } from '@angular/router';
 })
 export class MainDeleteComponent implements OnInit {
   mainBack(){
-    this.router.navigate(['../Main'])
+    this.router.navigate(['../Projects'])
   }
   constructor(private router:Router) { }
 

@@ -9,15 +9,27 @@ import { Category,CentricScore,MapCode,Department,Contact,ProjectDependencies  }
 })
 export class MainAddeditComponent implements OnInit {
   mainBack(){
-    this.router.navigate(['../Main'])
+    this.router.navigate(['../Projects'])
   }
   save(){
-    this.router.navigate(['../Main/MainTasks'])
+    this.router.navigate(['../Projects/MainTasks'])
   }
   constructor(private router:Router, private pdSvc:ProjectDependenciesService) { }
 
+  categories:Category[];
+  centricScores:CentricScore[];
+  mapCodes:MapCode[];
+  departments:Department[];
+  contacts:Contact[];
+
+  projectDependencies:ProjectDependencies;
   async ngOnInit() {
-    console.log(await this.pdSvc.getDependencies());
+    this.projectDependencies=await this.pdSvc.getDependencies();
+    this.categories=await this.projectDependencies.Categories;
+    this.centricScores=await this.projectDependencies.CentricScores;
+    this.mapCodes=await this.projectDependencies.MapCodes;
+    this.departments=await this.projectDependencies.Departments;
+    this.contacts=await this.projectDependencies.Contacts;
   }
 
 }
