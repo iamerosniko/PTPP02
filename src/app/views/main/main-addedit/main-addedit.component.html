@@ -76,7 +76,14 @@
               </div>
               <div id="boditems" class="row col-md-12 input-group">
                 <label class="control-label">Project Sponsor</label>
-                <select type="text" class="form-control ng-untouched ng-pristine ng-valid" ></select>
+                <!-- <select type="text" class="form-control ng-untouched ng-pristine ng-valid" ></select> -->
+                <ng-select
+                    [multiple]="true"
+                    [allowClear]="true"
+                    [items]="items"
+                    (data)="refreshValue($event)"
+                    placeholder="No Associate selected">
+                </ng-select>
               </div>
               <div class="row col-md-12 input-group">
                 <label class="control-label">Project Manager</label>

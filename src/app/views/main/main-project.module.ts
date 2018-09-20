@@ -6,9 +6,12 @@ import { MainAddeditComponent } from './main-addedit/main-addedit.component';
 import { MainDeleteComponent } from './main-delete/main-delete.component';
 import { MainTasksComponent } from './main-tasks/main-tasks.component';
 import { ProjectDependenciesService } from '../../services/services';
+import { SelectModule } from 'ng2-select';
+
 @NgModule({
   imports: [
-    CommonModule,RouterModule
+    CommonModule,SelectModule,
+    RouterModule,
   ],
   providers:[ProjectDependenciesService],
   // declarations: [MainComponent, MainAddeditComponent, MainDeleteComponent, MainTasksComponent]

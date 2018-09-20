@@ -74,3 +74,10 @@ export interface Main {
     DatePrevious ?:Date,
     GroupName ?: string,
 }
+
+export class SelectItem{
+    constructor (
+        public id?: string,
+        public text?: string
+    ){}
+}
