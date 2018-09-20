@@ -22,7 +22,8 @@ export class MainAddeditComponent implements OnInit {
   mapCodes:MapCode[];
   departments:Department[];
   contacts:Contact[];
-  items:any[]=[];
+  public items:Array<any> = [
+    ]
   projectDependencies:ProjectDependencies;
   async ngOnInit() {
     this.projectDependencies=await this.pdSvc.getDependencies();
@@ -35,6 +36,7 @@ export class MainAddeditComponent implements OnInit {
   }
 
   async prepareMultipleLists(){
+    this.items=[];
     this.categories.forEach( contact => {
       this.items.push({ 'id': contact.CategoryID, 'text':contact.Category})
       // this.items.push(new SelectItem(contact.CategoryID,contact.Category))
@@ -45,7 +47,25 @@ export class MainAddeditComponent implements OnInit {
   }
   
   //ng2-select on select
+  // public refreshValue(value:any):void {
+  //   this.selectedItems = value;
+  // }
+  public selected(value:any):void {
+    console.log('Selected value is: ', value);
+  }
+ 
+  public removed(value:any):void {
+    console.log('Removed value is: ', value);
+  }
+ 
   public refreshValue(value:any):void {
     this.selectedItems = value;
+  }
+ 
+  public itemsToString(value:Array<any> = []):string {
+    return value
+      .map((item:any) => {
+        return item.text;
+      }).join(',');
   } 
 }
