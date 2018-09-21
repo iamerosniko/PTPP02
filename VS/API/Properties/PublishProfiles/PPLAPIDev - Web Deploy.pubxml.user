@@ -8,4 +8,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAErGD8uvHVkmdqOxdq7S2sgAAAAACAAAAAAADZgAAwAAAABAAAACiuY4kYmrVp66rTTLe0ScIAAAAAASAAACgAAAAEAAAAC2HZq9CFKokKJ9AQlqfktWAAAAAsgumccGuX/pL85YA/xKqpYHo3fBo8IBAgopRwFKdW3bNzDpO7EJPN4GiLqZ6cshNJl2j3oRAPXr6yrlFAxwaz2VO4/aaEx+FpxxUeXJIOlCWrD/0Xl3kACGvOKBYUtAaRBZDVO6yThEiGVCFEvIkN6TomfZOq6W6trzOWWSBK8cUAAAA8mKohZr4Jx1qgOmn77ZwoREt7hg=</EncryptedPassword>
   </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=jhas-azure-db-dev.database.secure.windows.net,15019;Initial Catalog=PPL_DEV;User id=biztech;Password=$k1ll$3T;</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="API.Tables.Context">
+      <Value>Data Source=jhas-azure-db-dev.database.secure.windows.net,15019;Initial Catalog=PPL_DEV;User id=biztech;Password=$k1ll$3T;</Value>
+    </EFMigrations>
+  </ItemGroup>
 </Project>

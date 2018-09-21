@@ -6,16 +6,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGtL90gdKMEemz0OLwsI7FgAAAAACAAAAAAADZgAAwAAAABAAAAB8gc0YllZ8QgEa9X+3PaDEAAAAAASAAACgAAAAEAAAAH3TtSNT1K99o2ZGHFstEM6AAAAAiS/4Bg9zdXabjm8kwa7kV82P61DuMPtIwJwq8cRiyCRTQSSjafFfwIPOmQvzAYaklDV8hKcf1G6K+vvgeeo2xmtjP+YeIoDbLnAFaNvkP5SRqIxgxVXC35Fv0IbahBqNVzAqm2JIMqZN4W+BoEXMfUANaT8RqpcoC5w4Sllggx8UAAAA+Bzs2+3/Rf3oQJCkHWhOAEjptyw=</EncryptedPassword>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAErGD8uvHVkmdqOxdq7S2sgAAAAACAAAAAAADZgAAwAAAABAAAABRCc7uyK95lTBHEsI8YMw6AAAAAASAAACgAAAAEAAAANoVnEcY7iFJ4KEO76oSDAWAAAAAfBZWXCNktzjVBzX+8qJLQpMyvzRcXc+9dAoEdc+b+Sz1AH5CjePJnsETXVm07XpavBO7n/oIcXc1UxStzQo5h3LQAbVSjLCAUb2aPmd0addNNEbnTxMUKLVXAfhI1fCIvzv89WsA8uL9jF1j2itAGOXOAGzHWHd+AE4C+ZddtHUUAAAAviIKvtvDQaFfrxaJ9P0oqBl7ttM=</EncryptedPassword>
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="DefaultConnection">
-      <Value>Data Source=skillsetapidbserver.database.windows.net;Initial Catalog=ProjectPlanDev_db;User Id=biztech;Password=BizT3chAzure</Value>
+      <Value>Data Source=jhas-azure-db-dev.database.windows.net;Initial Catalog=PPL_DEV;User id=biztech;Password=$k1ll$3T;</Value>
     </DestinationConnectionStrings>
   </ItemGroup>
   <ItemGroup>
     <EFMigrations Include="API.Tables.Context">
-      <Value>Server=skillsetapidbserver.database.windows.net;Initial Catalog=ProjectPlanDev_db;User ID=biztech;Password=BizT3chAzure;Encrypt=True;</Value>
+      <Value>Data Source=jhas-azure-db-dev.database.windows.net;Initial Catalog=PPL_DEV;User id=biztech;Password=$k1ll$3T;</Value>
     </EFMigrations>
   </ItemGroup>
 </Project>
