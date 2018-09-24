@@ -3,7 +3,8 @@ export class ClientApiSettings {
     //change the url according to client's url
     private static Client_URL = "http://localhost:50000/api/"
     //change the url according for business workflow urls
-    private static API_URL = "http://localhost:58109/api/"
+    private static API_URL = "https://pplapidev.azurewebsites.net/api/"
+    // private static API_URL = "http://localhost:58109/api/"
     //  private static API_URL = "http://btaccessmanagementbw-dev.azurewebsites.net/api/"
     // private static API_URL = "http://btamdev.azurewebsites.net/api/"
 
