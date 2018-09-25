@@ -12,8 +12,14 @@ export class MainAddeditComponent implements OnInit {
     this.router.navigate(['../Projects'])
   }
   save(){
-    this.router.navigate(['../Projects/MainTasks'])
+    var ans = confirm("No Tasks added. Do you want to add project task first?");
+    ans ? this.router.navigate(['../Projects/MainTasks']) : (alert('Project Successfully saved'), this.router.navigate(['../Projects']));
   }
+
+  goToTask(){
+    this.router.navigate(['../Projects/MainTasks']);
+  }
+
   constructor(private router:Router, private pdSvc:ProjectDependenciesService) { }
   public selectedItems:SelectItem[] = [];
 
@@ -37,8 +43,8 @@ export class MainAddeditComponent implements OnInit {
 
   async prepareMultipleLists(){
     this.items=[];
-    this.categories.forEach( contact => {
-      this.items.push({ 'id': contact.CategoryID, 'text':contact.Category})
+    this.contacts.forEach( contact => {
+      this.items.push({ 'id': contact.ContactID, 'text':contact.ContactName+ ' ' + contact.LastName})
       // this.items.push(new SelectItem(contact.CategoryID,contact.Category))
       // this.items.push(contact.ContactName + ' ' + contact.LastName )
     });
