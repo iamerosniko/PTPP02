@@ -46,7 +46,28 @@ export interface ProjectDependencies{
     Categories?:Category[]
 }
 
-
+export interface Projects{
+    ProjectID?:string,
+    DepartmentID?:string,
+    Department?:string,
+    ProjectCategory?:string,
+    Category?:string,
+    CustomerMapCode?:string,
+    MapCode?:string,
+    CustomerCentricScore?:string,
+    Score?:string,
+    ProjectNumber?:string,
+    ProjectOverview?:string,
+    ProjectManager?:string,
+    ProjectSponsor?:string,
+    ProjectStakeHolder?:string,
+    Status?:string,
+    DateAdded?:Date,
+    StartDate?:Date,
+    EndDate?:Date,
+    ProjectTargetDate?:Date,
+    EndDateChanged?:boolean
+}
 
 export interface ProjectContacts {
     MainID ?: string,
