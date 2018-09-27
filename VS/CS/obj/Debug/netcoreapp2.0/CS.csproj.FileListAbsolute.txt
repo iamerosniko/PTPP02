@@ -9,3 +9,14 @@ C:\Users\zEROSeven\source\repos\GenericTemplate\CS\obj\Debug\netcoreapp2.0\CS.As
 C:\Users\zEROSeven\source\repos\GenericTemplate\CS\obj\Debug\netcoreapp2.0\CS.AssemblyInfo.cs
 C:\Users\zEROSeven\source\repos\GenericTemplate\CS\obj\Debug\netcoreapp2.0\CS.dll
 C:\Users\zEROSeven\source\repos\GenericTemplate\CS\obj\Debug\netcoreapp2.0\CS.pdb
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\bin\Debug\netcoreapp2.0\CS.deps.json
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\bin\Debug\netcoreapp2.0\CS.runtimeconfig.json
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\bin\Debug\netcoreapp2.0\CS.runtimeconfig.dev.json
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\bin\Debug\netcoreapp2.0\CS.dll
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\bin\Debug\netcoreapp2.0\CS.pdb
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\obj\Debug\netcoreapp2.0\CS.csprojAssemblyReference.cache
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\obj\Debug\netcoreapp2.0\CS.csproj.CoreCompileInputs.cache
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\obj\Debug\netcoreapp2.0\CS.AssemblyInfoInputs.cache
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\obj\Debug\netcoreapp2.0\CS.AssemblyInfo.cs
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\obj\Debug\netcoreapp2.0\CS.dll
+C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\obj\Debug\netcoreapp2.0\CS.pdb

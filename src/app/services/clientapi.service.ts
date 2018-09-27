@@ -23,7 +23,14 @@ export class ClientApiService {
   }
 
   public normalHeader(){
-    this.headers=new Headers({'Content-Type': 'application/json'});
+    this.headers=new Headers([
+      {'Content-Type': 'application/json'},
+      {'Access-Control-Allow-Origin':'*'},
+      {'Access-Control-Allow-Headers':'Content-Type'},
+      {'Access-Control-Allow-Credentials':'true'},
+      {'Access-Control-Allow-Methods':'GET,POST,PUT'},
+      {'Access-Control-Allow-Headers':'Access-Control-Allow-Headers,Origin,Accept, X-Requested-With, Content-Type, Accept, Authorization'},
+    ]);
   }
 
   async getAll() {  

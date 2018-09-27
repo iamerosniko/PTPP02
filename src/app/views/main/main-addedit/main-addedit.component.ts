@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Routes, ActivatedRoute } from '@angular/router';
-import { ProjectDependenciesService } from '../../../services/services';
-import { Category,CentricScore,MapCode,Department,Contact,ProjectDependencies,SelectItem  } from '../../../entities/entities';
+import { ProjectDependenciesService,ContactService } from '../../../services/services';
+import { Category,CentricScore,MapCode,Department,Contact,WorkdayContact,WorkdayFormat,ProjectDependencies,SelectItem  } from '../../../entities/entities';
 @Component({
   selector: 'app-main-addedit',
   templateUrl: './main-addedit.component.html',
   styleUrls: ['./main-addedit.component.css']
 })
 export class MainAddeditComponent implements OnInit {
+  public WDFormat:WorkdayFormat={};
+  public WDContacts2:WorkdayContact[]
+  public WDContacts:WorkdayContact[]
+
   mainBack(){
     this.router.navigate(['../Projects'])
   }
@@ -20,8 +24,11 @@ export class MainAddeditComponent implements OnInit {
     this.router.navigate(['../Projects/MainTasks']);
   }
 
-  constructor(private router:Router, private pdSvc:ProjectDependenciesService) { }
+
+
+  constructor(private router:Router,private consvc:ContactService, private pdSvc:ProjectDependenciesService) { }
   public selectedItems:SelectItem[] = [];
+  public active_tags:SelectItem[] = [{id:'a',text:'banana'}];
 
   categories:Category[];
   centricScores:CentricScore[];
@@ -39,6 +46,20 @@ export class MainAddeditComponent implements OnInit {
     this.departments=await this.projectDependencies.Departments;
     this.contacts=await this.projectDependencies.Contacts;
     await this.prepareMultipleLists();
+  }
+
+  async onSearchChange(searchValue : string ) {  
+    console.log(searchValue);
+    console.log(JSON.stringify(this.active_tags))
+
+    // console.log(await this.consvc.getWorkday(searchValue));
+    this.WDFormat=<WorkdayFormat>await this.consvc.getWorkday(searchValue);
+    this.WDContacts2=<WorkdayContact[]>await this.WDFormat.data;
+    console.log(<WorkdayContact[]>this.WDContacts2)
+    this.WDContacts=[];
+    this.WDContacts2.forEach(element => {
+      this.WDContacts.push({full_name:element.full_name})
+    });
   }
 
   async prepareMultipleLists(){

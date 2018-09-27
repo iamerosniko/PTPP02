@@ -1,8 +1,8 @@
-<div id="dep_default" class="tab-pane fade in active">
+<div>
 	<div class="col-md-12">
 		<!--tool bar-->
 		<div class="row">
-			<a href="#" (click)="depDetails()" class="btn btn-primary btn-sm" data-toggle="tab" data-target="#dep_editor"><i class="fa fa-plus"></i>&nbsp;New Record</a>
+			<a (click)="depDetails(null)" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>&nbsp;New Record</a>
 		</div>
 		<br />
 		<!--table-->
@@ -20,7 +20,7 @@
 							<td><a (click)="depDetails(department)" >{{department.Department}}</a></td>						
 							<td>
 								<div class="btn-group">
-									<a (click)="depDetails(department)"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit"><i class="fa fa-edit"></i></a>
+									<a (click)="depDetails(department)"  class="btn btn-default btn-xs"title="Edit"><i class="fa fa-edit"></i></a>
 									<a (click)="depDelete(department)" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
 								</div>
 							</td>
@@ -28,14 +28,8 @@
 					</tbody>
 				</table>
 			</div>
-			<!-- <div *ngIf="departments.length==0 && loading==false"> -->
-				<!-- No Departments Found -->
-			<!-- </div> -->
-			<!-- <div *ngIf="departments.length==0 && loading==true"> -->
-				<!-- Getting Departments -->
-				<!-- <span class="fa fa-cog fa-spin fa-3x fa-fw col-md-offset-4 col-md-1 "></span> -->
-			<!-- </div> -->
 		</div>
+		
 		<!--pagination-->
 		<div class="row">
 			<div class="pull-right">

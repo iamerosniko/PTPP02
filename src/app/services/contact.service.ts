@@ -20,6 +20,12 @@ export class ContactService {
     return this.api.getAll();
   }
 
+  getWorkday(employee:string){
+    this.api.normalHeader();
+    this.api.apiUrl="https://employee-service.apps.cac.pcf.manulife.com/api/employee/firstNameLike/"+employee+"?limit=10"
+    return this.api.getAll();
+  }
+
   getContact(id: string) {
     this.api.normalHeader();
     this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Contacts")
