@@ -103,8 +103,16 @@
               </div>
               <div class="row col-md-12">
                 <label class="control-label">Project Stakeholder</label>
-                <input (input)="onSearchChange($event.target.value)"/>
-                {{WDContacts | json}}
+                <!-- <input (input)="onSearchChange($event.target.value)"/>
+                {{WDContacts | json}} -->
+                <ng-select
+                    [multiple]="true"
+                    [active]="active_tags"
+                    [allowClear]="true"
+                    [items]="items"
+                    (data)="refreshValue($event)"
+                    placeholder="No Associate selected">
+                </ng-select>
               </div>
               <div id="boditems" class="row col-md-12 ">
                 <label class="control-label">Start Date</label>

@@ -135,7 +135,7 @@ namespace API.Migrations
 
                     b.Property<Guid>("CustomerCentricScore");
 
-                    b.Property<string>("CustomerMapCode");
+                    b.Property<Guid>("CustomerMapCode");
 
                     b.Property<DateTime>("DateAdded");
 
@@ -147,21 +147,21 @@ namespace API.Migrations
 
                     b.Property<Guid>("ProjectCategory");
 
-                    b.Property<Guid>("ProjectManager");
+                    b.Property<string>("ProjectManager");
 
                     b.Property<string>("ProjectNumber");
 
                     b.Property<string>("ProjectOverview");
 
-                    b.Property<Guid>("ProjectSponsor");
+                    b.Property<string>("ProjectSponsor");
 
-                    b.Property<Guid>("ProjectStakeHolder");
+                    b.Property<string>("ProjectStakeHolder");
 
                     b.Property<DateTime>("ProjectTargetDate");
 
                     b.Property<DateTime>("StartDate");
 
-                    b.Property<Guid>("Status");
+                    b.Property<string>("Status");
 
                     b.HasKey("ProjectID");
 
