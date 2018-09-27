@@ -152,3 +152,149 @@ END;
 
 GO
 
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m002')
+BEGIN
+    DECLARE @var1 sysname;
+    SELECT @var1 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'PP_Project') AND [c].[name] = N'Status');
+    IF @var1 IS NOT NULL EXEC(N'ALTER TABLE [PP_Project] DROP CONSTRAINT [' + @var1 + '];');
+    ALTER TABLE [PP_Project] ALTER COLUMN [Status] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m002')
+BEGIN
+    DECLARE @var2 sysname;
+    SELECT @var2 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'PP_Project') AND [c].[name] = N'ProjectStakeHolder');
+    IF @var2 IS NOT NULL EXEC(N'ALTER TABLE [PP_Project] DROP CONSTRAINT [' + @var2 + '];');
+    ALTER TABLE [PP_Project] ALTER COLUMN [ProjectStakeHolder] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m002')
+BEGIN
+    DECLARE @var3 sysname;
+    SELECT @var3 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'PP_Project') AND [c].[name] = N'ProjectSponsor');
+    IF @var3 IS NOT NULL EXEC(N'ALTER TABLE [PP_Project] DROP CONSTRAINT [' + @var3 + '];');
+    ALTER TABLE [PP_Project] ALTER COLUMN [ProjectSponsor] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m002')
+BEGIN
+    DECLARE @var4 sysname;
+    SELECT @var4 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'PP_Project') AND [c].[name] = N'ProjectManager');
+    IF @var4 IS NOT NULL EXEC(N'ALTER TABLE [PP_Project] DROP CONSTRAINT [' + @var4 + '];');
+    ALTER TABLE [PP_Project] ALTER COLUMN [ProjectManager] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m002')
+BEGIN
+    DECLARE @var5 sysname;
+    SELECT @var5 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'PP_Project') AND [c].[name] = N'CustomerMapCode');
+    IF @var5 IS NOT NULL EXEC(N'ALTER TABLE [PP_Project] DROP CONSTRAINT [' + @var5 + '];');
+    ALTER TABLE [PP_Project] ALTER COLUMN [CustomerMapCode] uniqueidentifier NOT NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m002')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20180927171625_m002', N'2.0.1-rtm-125');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m02')
+BEGIN
+    DECLARE @var6 sysname;
+    SELECT @var6 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'PP_Project') AND [c].[name] = N'Status');
+    IF @var6 IS NOT NULL EXEC(N'ALTER TABLE [PP_Project] DROP CONSTRAINT [' + @var6 + '];');
+    ALTER TABLE [PP_Project] ALTER COLUMN [Status] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m02')
+BEGIN
+    DECLARE @var7 sysname;
+    SELECT @var7 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'PP_Project') AND [c].[name] = N'ProjectStakeHolder');
+    IF @var7 IS NOT NULL EXEC(N'ALTER TABLE [PP_Project] DROP CONSTRAINT [' + @var7 + '];');
+    ALTER TABLE [PP_Project] ALTER COLUMN [ProjectStakeHolder] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m02')
+BEGIN
+    DECLARE @var8 sysname;
+    SELECT @var8 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'PP_Project') AND [c].[name] = N'ProjectSponsor');
+    IF @var8 IS NOT NULL EXEC(N'ALTER TABLE [PP_Project] DROP CONSTRAINT [' + @var8 + '];');
+    ALTER TABLE [PP_Project] ALTER COLUMN [ProjectSponsor] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m02')
+BEGIN
+    DECLARE @var9 sysname;
+    SELECT @var9 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'PP_Project') AND [c].[name] = N'ProjectManager');
+    IF @var9 IS NOT NULL EXEC(N'ALTER TABLE [PP_Project] DROP CONSTRAINT [' + @var9 + '];');
+    ALTER TABLE [PP_Project] ALTER COLUMN [ProjectManager] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m02')
+BEGIN
+    DECLARE @var10 sysname;
+    SELECT @var10 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'PP_Project') AND [c].[name] = N'CustomerMapCode');
+    IF @var10 IS NOT NULL EXEC(N'ALTER TABLE [PP_Project] DROP CONSTRAINT [' + @var10 + '];');
+    ALTER TABLE [PP_Project] ALTER COLUMN [CustomerMapCode] uniqueidentifier NOT NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m02')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20180927171625_m02', N'2.0.1-rtm-125');
+END;
+
+GO
+
