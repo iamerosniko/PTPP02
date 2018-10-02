@@ -20,3 +20,14 @@ C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\obj\Debug\netcoreapp2.0\CS.Assemb
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\obj\Debug\netcoreapp2.0\CS.AssemblyInfo.cs
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\obj\Debug\netcoreapp2.0\CS.dll
 C:\Users\alverer\Documents\GitHub\PTPP02\VS\CS\obj\Debug\netcoreapp2.0\CS.pdb
+C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\CS\bin\Debug\netcoreapp2.0\CS.deps.json
+C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\CS\bin\Debug\netcoreapp2.0\CS.runtimeconfig.json
+C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\CS\bin\Debug\netcoreapp2.0\CS.runtimeconfig.dev.json
+C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\CS\bin\Debug\netcoreapp2.0\CS.dll
+C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\CS\bin\Debug\netcoreapp2.0\CS.pdb
+C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\CS\obj\Debug\netcoreapp2.0\CS.csprojAssemblyReference.cache
+C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\CS\obj\Debug\netcoreapp2.0\CS.csproj.CoreCompileInputs.cache
+C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\CS\obj\Debug\netcoreapp2.0\CS.AssemblyInfoInputs.cache
+C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\CS\obj\Debug\netcoreapp2.0\CS.AssemblyInfo.cs
+C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\CS\obj\Debug\netcoreapp2.0\CS.dll
+C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\CS\obj\Debug\netcoreapp2.0\CS.pdb

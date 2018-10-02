@@ -298,3 +298,47 @@ END;
 
 GO
 
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181002115004_m004')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20181002115004_m004', N'2.0.1-rtm-125');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181002115824_m005')
+BEGIN
+    CREATE TABLE [PP_Tasks] (
+        [TaskID] uniqueidentifier NOT NULL,
+        [ProjectID] uniqueidentifier NOT NULL,
+        [TaskDesc] nvarchar(max) NULL,
+        [TaskStatus] nvarchar(max) NULL,
+        CONSTRAINT [PK_PP_Tasks] PRIMARY KEY ([TaskID])
+    );
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181002115824_m005')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20181002115824_m005', N'2.0.1-rtm-125');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181002120117_m006')
+BEGIN
+    ALTER TABLE [PP_Project] ADD [NumberOfTasks] int NOT NULL DEFAULT 0;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181002120117_m006')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20181002120117_m006', N'2.0.1-rtm-125');
+END;
+
+GO
+

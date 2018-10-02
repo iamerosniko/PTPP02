@@ -13169,11 +13169,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alverer\\Documents\\GitHub\\PTPP02\\VS\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\alverer\\Desktop\\Apps\\jsppd_rel_1_0_0\\JSPPD\\app\\VS\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\alverer\\Documents\\GitHub\\PTPP02\\VS\\API\\API.csproj",
+      "projectPath": "C:\\Users\\alverer\\Desktop\\Apps\\jsppd_rel_1_0_0\\JSPPD\\app\\VS\\API\\API.csproj",
       "packagesPath": "C:\\Users\\alverer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alverer\\Documents\\GitHub\\PTPP02\\VS\\API\\obj\\",
+      "outputPath": "C:\\Users\\alverer\\Desktop\\Apps\\jsppd_rel_1_0_0\\JSPPD\\app\\VS\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

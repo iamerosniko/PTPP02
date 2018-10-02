@@ -1,10 +1,12 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace API.Controllers.Transactional.Main
 {
+  [EnableCors("CORS")]
   [Produces("application/json")]
   [Route("api/PP_WorkDay")]
   public class PP_WorkDayController : Controller
@@ -16,18 +18,25 @@ namespace API.Controllers.Transactional.Main
       string employee = "eros";
       string apiURL = @"https://employee-service.apps.cac.pcf.manulife.com:443/api/employee/firstNameLike/" + employee + "?limit=10";
       string finalResult = "";
-      WebClient client = new WebClient();
+      HttpClient client = new HttpClient();
+      //WebClient client = new WebClient();
       //client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue(""));
       try
       {
-        Uri uri = new Uri(apiURL);
-        var request = client.DownloadString(apiURL);
+        //Uri uri = new Uri(apiURL);
+        //var request = client.DownloadString(apiURL);
         //if (request.IsSuccessStatusCode)
         //{
         //  var result = await request.Content.ReadAsStringAsync();
         //  finalResult = result;
         //}
-        finalResult = request;
+        var request = await client.GetAsync(apiURL);
+        if (request.IsSuccessStatusCode)
+        {
+          var result = request.Content.ReadAsStringAsync().Result;
+
+          finalResult = result;
+        }
       }
       catch (Exception ex)
       {

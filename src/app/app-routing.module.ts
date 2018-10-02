@@ -6,6 +6,7 @@ import { MainProjectComponent,MainAddeditComponent,MainDeleteComponent,MainTasks
 import { SearchComponent, SearchDetailsComponent, SearchTasksComponent } from './views/search/search'
 import { ReportsComponent } from './views/reports/reports'
 const routes: Routes = [
+  { path: '', redirectTo:'Projects', pathMatch:'full'},
   { 
     path:'Maintenance',component:MaintenanceComponent,
     children: [

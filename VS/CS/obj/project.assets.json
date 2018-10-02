@@ -12541,15 +12541,12 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\alverer\\Documents\\GitHub\\PTPP02\\VS\\CS\\CS.csproj",
+      "projectUniqueName": "C:\\Users\\alverer\\Desktop\\Apps\\jsppd_rel_1_0_0\\JSPPD\\app\\VS\\CS\\CS.csproj",
       "projectName": "CS",
-      "projectPath": "C:\\Users\\alverer\\Documents\\GitHub\\PTPP02\\VS\\CS\\CS.csproj",
+      "projectPath": "C:\\Users\\alverer\\Desktop\\Apps\\jsppd_rel_1_0_0\\JSPPD\\app\\VS\\CS\\CS.csproj",
       "packagesPath": "C:\\Users\\alverer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alverer\\Documents\\GitHub\\PTPP02\\VS\\CS\\obj\\",
+      "outputPath": "C:\\Users\\alverer\\Desktop\\Apps\\jsppd_rel_1_0_0\\JSPPD\\app\\VS\\CS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

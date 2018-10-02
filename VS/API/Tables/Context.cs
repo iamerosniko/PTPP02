@@ -14,6 +14,7 @@ namespace API.Tables
     public DbSet<PP_Contact> Contacts { get; set; }
     public DbSet<PP_Department> Departments { get; set; }
     public DbSet<PP_Projects> Projects { get; set; }
+    public DbSet<PP_Tasks> Tasks { get; set; }
     public DbSet<PP_MapCode> MapCodes { get; set; }
     public DbSet<PP_ProjectContacts> ProjectContacts { get; set; }
   }

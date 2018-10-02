@@ -145,6 +145,8 @@ namespace API.Migrations
 
                     b.Property<bool>("EndDateChanged");
 
+                    b.Property<int>("NumberOfTasks");
+
                     b.Property<Guid>("ProjectCategory");
 
                     b.Property<string>("ProjectManager");
@@ -166,6 +168,22 @@ namespace API.Migrations
                     b.HasKey("ProjectID");
 
                     b.ToTable("PP_Project");
+                });
+
+            modelBuilder.Entity("API.Tables.PP_Tasks", b =>
+                {
+                    b.Property<Guid>("TaskID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<Guid>("ProjectID");
+
+                    b.Property<string>("TaskDesc");
+
+                    b.Property<string>("TaskStatus");
+
+                    b.HasKey("TaskID");
+
+                    b.ToTable("PP_Tasks");
                 });
 #pragma warning restore 612, 618
         }
