@@ -1,5 +1,4 @@
 export * from './maintenance.component'
-export * from './maintest/maintest.component'
 
 export * from './departments/department-list/department-list.component'
 export * from './departments/department-addedit/department-addedit.component'

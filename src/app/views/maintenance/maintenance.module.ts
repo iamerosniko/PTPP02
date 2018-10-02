@@ -3,7 +3,6 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MaintenanceComponent } from './maintenance.component';
-import { MaintestComponent } from './maintest/maintest.component';
 import { DepartmentListComponent } from './departments/department-list/department-list.component';
 import { DepartmentAddeditComponent } from './departments/department-addedit/department-addedit.component';
 import { DepartmentDeleteComponent } from './departments/department-delete/department-delete.component';
@@ -26,6 +25,6 @@ import { CategoryService, CentricScoreService, ClientApiService, ClientApiSettin
     CommonModule,RouterModule
   ],
   providers:[  CategoryService, CentricScoreService, ClientApiService, ClientApiSettings, ContactService, DepartmentService, MapCodeService ],
-  declarations: [MaintenanceComponent, MaintestComponent, DepartmentListComponent, DepartmentAddeditComponent, DepartmentDeleteComponent, ProjectcategoryListComponent, ProjectcategoryAddeditComponent, CustomerMapcodeListComponent, CustomerMapcodeAddeditComponent, CustomerMapcodeDeleteComponent, CustomerCentricscoreListComponent, CustomerCentricscoreAddeditComponent, CustomerCentricscoreDeleteComponent, ContactsListComponent, ContactsAddeditComponent, ContactsDeleteComponent, ProjectcategoryDeleteComponent]
+  declarations: [MaintenanceComponent, DepartmentListComponent, DepartmentAddeditComponent, DepartmentDeleteComponent, ProjectcategoryListComponent, ProjectcategoryAddeditComponent, CustomerMapcodeListComponent, CustomerMapcodeAddeditComponent, CustomerMapcodeDeleteComponent, CustomerCentricscoreListComponent, CustomerCentricscoreAddeditComponent, CustomerCentricscoreDeleteComponent, ContactsListComponent, ContactsAddeditComponent, ContactsDeleteComponent, ProjectcategoryDeleteComponent]
 })
 export class MaintenanceModule { }

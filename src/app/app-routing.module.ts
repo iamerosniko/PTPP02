@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, RouterOutlet } from '@angular/router';
 
-import { MaintenanceComponent,MaintestComponent, DepartmentListComponent, ProjectcategoryListComponent, CustomerMapcodeListComponent, CustomerCentricscoreListComponent, ContactsListComponent, DepartmentAddeditComponent, DepartmentDeleteComponent, ProjectcategoryDeleteComponent, ProjectcategoryAddeditComponent, CustomerMapcodeAddeditComponent, CustomerCentricscoreAddeditComponent, ContactsAddeditComponent, CustomerMapcodeDeleteComponent, CustomerCentricscoreDeleteComponent, ContactsDeleteComponent } from './views/maintenance/maintenance'
+import { MaintenanceComponent, DepartmentListComponent, ProjectcategoryListComponent, CustomerMapcodeListComponent, CustomerCentricscoreListComponent, ContactsListComponent, DepartmentAddeditComponent, DepartmentDeleteComponent, ProjectcategoryDeleteComponent, ProjectcategoryAddeditComponent, CustomerMapcodeAddeditComponent, CustomerCentricscoreAddeditComponent, ContactsAddeditComponent, CustomerMapcodeDeleteComponent, CustomerCentricscoreDeleteComponent, ContactsDeleteComponent } from './views/maintenance/maintenance'
 import { MainProjectComponent,MainAddeditComponent,MainDeleteComponent,MainTasksComponent } from './views/main/main-project'
 import { SearchComponent, SearchDetailsComponent, SearchTasksComponent } from './views/search/search'
 import { ReportsComponent } from './views/reports/reports'
@@ -16,7 +16,6 @@ const routes: Routes = [
       { path: 'CustomerMaps', component: CustomerMapcodeListComponent, outlet: 'mroute' },
       { path: 'CustomerCentrics', component: CustomerCentricscoreListComponent, outlet: 'mroute' },
       { path: 'Contacts', component: ContactsListComponent, outlet: 'mroute' },
-      { path: '', component: MaintestComponent, outlet: 'mroute'},
       // forms here Add
       { path: 'DepartmentsNew', component: DepartmentAddeditComponent, outlet: 'mroute' },
       { path: 'ProjectCategoriesNew', component: ProjectcategoryAddeditComponent, outlet: 'mroute' },
@@ -35,7 +34,7 @@ const routes: Routes = [
       { path: 'CustomerMapsDelete/:mapID', component: CustomerMapcodeDeleteComponent, outlet: 'mroute' },
       { path: 'CustomerCentricsDelete/:centricScoreID', component: CustomerCentricscoreDeleteComponent, outlet: 'mroute' },
       { path: 'ContactsDelete/:contactsID', component: ContactsDeleteComponent, outlet: 'mroute' },
-    ]  
+    ],  
   },
   {
     path:'Search',component:SearchComponent,
