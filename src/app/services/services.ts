@@ -6,3 +6,4 @@ export * from './clientapi.settings'
 export * from './contact.service'
 export * from './mapcode.service'
 export * from './projectdependencies.service';
+export * from './project.service';

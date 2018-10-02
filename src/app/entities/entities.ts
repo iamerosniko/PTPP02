@@ -62,7 +62,6 @@ export interface Projects{
     ProjectSponsor?:string,
     ProjectStakeHolder?:string,
     Status?:string,
-    DateAdded?:Date,
     StartDate?:Date,
     EndDate?:Date,
     ProjectTargetDate?:Date,
