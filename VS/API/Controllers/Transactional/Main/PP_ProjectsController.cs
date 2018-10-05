@@ -1,3 +1,4 @@
+using API.Models.Main;
 using API.Tables;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -23,9 +24,46 @@ namespace API.Controllers.Transactional.Main
 
     // GET: api/PP_Projects
     [HttpGet]
-    public IEnumerable<PP_Projects> GetProjects()
+    public List<ProjectstDTO> GetProjects()
     {
-      return _context.Projects;
+      List<ProjectstDTO> projects = new List<ProjectstDTO>();
+      //dependencies
+      var categoryList = _context.Categories.ToList();
+      var scores = _context.CentricScores.ToList();
+      var mapCodes = _context.MapCodes.ToList();
+      var departments = _context.Departments.ToList();
+
+      var projectList = _context.Projects.ToList();
+      foreach (var proj in projectList)
+      {
+        ProjectstDTO project = new ProjectstDTO
+        {
+          Status = proj.Status,
+          Category = categoryList.Find(x => x.CategoryID == proj.ProjectCategoryID).Category,
+          Score = scores.Find(x => x.CentricScoreID == proj.CustomerCentricScoreID).Score,
+          Department = departments.Find(x => x.DepartmentID == proj.DepartmentID).Department,
+          EndDate = proj.EndDate,
+          EndDateChanged = proj.EndDateChanged,
+          GroupName = proj.GroupName,
+          MapCode = mapCodes.Find(x => x.MapCodeID == proj.CustomerMapCodeID).MapCode,
+          NumberOfTasks = proj.NumberOfTasks,
+          ProjectManager = proj.ProjectManager,
+          ProjectOverview = proj.ProjectOverview,
+          ProjectSponsor = proj.ProjectSponsor,
+          ProjectNumber = proj.ProjectNumber,
+          ProjectStakeHolder = proj.ProjectStakeHolder,
+          ProjectTargetDate = proj.ProjectTargetDate,
+          StartDate = proj.StartDate,
+          ProjectID = proj.ProjectID
+        };
+
+        if (project != null)
+        {
+          projects.Add(project);
+        }
+      }
+
+      return projects;
     }
 
     // GET: api/PP_Projects/5

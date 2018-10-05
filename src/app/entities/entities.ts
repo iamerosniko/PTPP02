@@ -65,7 +65,8 @@ export interface Projects{
     StartDate?:Date,
     EndDate?:Date,
     ProjectTargetDate?:Date,
-    EndDateChanged?:boolean
+    EndDateChanged?:boolean,
+    GroupName?:string
 }
 
 export interface ProjectContacts {

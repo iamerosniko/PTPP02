@@ -133,11 +133,9 @@ namespace API.Migrations
                     b.Property<Guid>("ProjectID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<Guid>("CustomerCentricScore");
+                    b.Property<Guid>("CustomerCentricScoreID");
 
-                    b.Property<Guid>("CustomerMapCode");
-
-                    b.Property<DateTime>("DateAdded");
+                    b.Property<Guid>("CustomerMapCodeID");
 
                     b.Property<Guid>("DepartmentID");
 
@@ -145,9 +143,11 @@ namespace API.Migrations
 
                     b.Property<bool>("EndDateChanged");
 
+                    b.Property<string>("GroupName");
+
                     b.Property<int>("NumberOfTasks");
 
-                    b.Property<Guid>("ProjectCategory");
+                    b.Property<Guid>("ProjectCategoryID");
 
                     b.Property<string>("ProjectManager");
 

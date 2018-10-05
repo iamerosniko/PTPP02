@@ -11,9 +11,9 @@ namespace API.Tables
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public Guid ProjectID { get; set; } //hidden
     public Guid DepartmentID { get; set; } //departments
-    public Guid ProjectCategory { get; set; } //category
-    public Guid CustomerMapCode { get; set; } //mapcode
-    public Guid CustomerCentricScore { get; set; } //centricscore
+    public Guid ProjectCategoryID { get; set; } //category
+    public Guid CustomerMapCodeID { get; set; } //mapcode
+    public Guid CustomerCentricScoreID { get; set; } //centricscore
     public string ProjectNumber { get; set; } //autogen
     public string ProjectOverview { get; set; } //project overview
     //json strings
@@ -27,5 +27,6 @@ namespace API.Tables
     public DateTime EndDate { get; set; }
     public DateTime ProjectTargetDate { get; set; }
     public bool EndDateChanged { get; set; } //disabled
+    public string GroupName { get; set; }
   }
 }

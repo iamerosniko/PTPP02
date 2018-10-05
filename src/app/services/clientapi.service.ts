@@ -23,14 +23,27 @@ export class ClientApiService {
   }
 
   public normalHeader(){
-    this.headers=new Headers([
-      {'Content-Type': 'application/json'},
-      {'Access-Control-Allow-Origin':'*'},
-      {'Access-Control-Allow-Headers':'Content-Type'},
-      {'Access-Control-Allow-Credentials':'true'},
-      {'Access-Control-Allow-Methods':'GET,POST,PUT'},
-      {'Access-Control-Allow-Headers':'Access-Control-Allow-Headers,Origin,Accept, X-Requested-With, Content-Type, Accept, Authorization'},
-    ]);
+    this.headers=new Headers({
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin':'*',
+      'Access-Control-Allow-Credentials':'true',
+      'Access-Control-Allow-Methods':'GET,POST,PUT',
+      'Access-Control-Allow-Headers':'Access-Control-Allow-Headers',
+      'Access-Control-Request-Method':'GET',
+      'Cache-Control': 'no-cache',
+      'Pragma': 'no-cache',
+      'Expires': 'Sat, 01 Jan 2000 00:00:00 GMT',
+      'Etag' :"3GgqcTj/W6Z2IZ5uqkzEAg=="
+    });
+  }
+
+  public sampl(){
+    this.headers = new Headers({
+      'Content-Type': 'application/json',
+      'Cache-Control': 'no-cache',
+      'Pragma': 'no-cache',
+      'Expires': 'Sat, 01 Jan 2000 00:00:00 GMT'
+  });
   }
 
   async getAll() {  

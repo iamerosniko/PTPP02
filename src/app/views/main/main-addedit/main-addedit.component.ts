@@ -71,6 +71,8 @@ export class MainAddeditComponent implements OnInit {
     });
 
     await console.log(this.items)
+  
+    console.log(await this.consvc.getWorkday('eros'));
   }
   
   //ng2-select on select
