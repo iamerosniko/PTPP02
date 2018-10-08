@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<sitemanifest>
-  <IisApp path="C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\API\obj\Release\netcoreapp2.0\PubTmp\Out\" />
-  <dbfullsql path="C:\Users\alverer\Desktop\Apps\jsppd_rel_1_0_0\JSPPD\app\VS\API\obj\Release\netcoreapp2.0\PubTmp\EFSQLScripts\API.Tables.Context.sql" />
-</sitemanifest>

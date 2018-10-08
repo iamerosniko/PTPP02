@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAErGD8uvHVkmdqOxdq7S2sgAAAAACAAAAAAADZgAAwAAAABAAAADI462iCAi1s0xtPJDY2Nx2AAAAAASAAACgAAAAEAAAAB0IYs1w/6gh8CBGakKhCdCAAAAA/gSc7b5+LR63NDwjM3cGumC+my9sNKcAaJnoG3ZURj/wfFLwnbpKr8TiLos2NhkgDPsggJOczJotgEhoXXgrncXCMwBj+DIKfhbhm7saYdgWc0akBzx+ad7BJGzIKuOuEGcW95HsOD/+s/zGLwsmeQMmMa6LVsjqgPdFbFLCi7MUAAAA0JYdMiDH2pH3a7g/8SVlVBfy+cA=</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=jhas-azure-db-dev.database.windows.net%3bInitial Catalog=PPL_DEV%3bUser id=biztech%3bPassword=%24k1ll%243T%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="API.Tables.Context">
+      <Value>Data Source=jhas-azure-db-dev.database.windows.net%3bInitial Catalog=PPL_DEV%3bUser id=biztech%3bPassword=%24k1ll%243T%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
