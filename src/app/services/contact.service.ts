@@ -21,8 +21,8 @@ export class ContactService {
   }
 
   getWorkday(employee:string){
-    this.api.normalHeader();
-    this.api.apiUrl="https://employee-service.apps.cac.pcf.manulife.com/api/employee/firstNameLike/"+employee+"?limit=10"
+    this.api.normalHeader(); 
+    this.api.apiUrl="https://employee-lookup-service-prod.apps.cac.pcf.manulife.com/api/employee/firstNameLike/"+employee+"?limit=10"
     return this.api.getAll();
   }
 

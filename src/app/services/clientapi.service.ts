@@ -23,13 +23,15 @@ export class ClientApiService {
   }
 
   public normalHeader(){
+
+    //Refused to set unsafe header "Access-Control-Request-Method"
+
     this.headers=new Headers({
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin':'*',
       'Access-Control-Allow-Credentials':'true',
       'Access-Control-Allow-Methods':'GET,POST,PUT',
       'Access-Control-Allow-Headers':'Access-Control-Allow-Headers',
-      'Access-Control-Request-Method':'GET',
       'Cache-Control': 'no-cache',
       'Pragma': 'no-cache',
       'Expires': 'Sat, 01 Jan 2000 00:00:00 GMT',
