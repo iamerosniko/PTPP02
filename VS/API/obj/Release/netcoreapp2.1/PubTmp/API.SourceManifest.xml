@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="C:\Users\alverer\source\repos\ProjectPlanDatabase\API\obj\Release\netcoreapp2.1\PubTmp\Out\" />
-  <dbfullsql path="C:\Users\alverer\source\repos\ProjectPlanDatabase\API\obj\Release\netcoreapp2.1\PubTmp\EFSQLScripts\API.Tables.Context.sql" />
+  <IisApp path="C:\Users\alverer\Desktop\Apps\project plan\JSPPD\app\VS\API\obj\Release\netcoreapp2.1\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\alverer\Desktop\Apps\project plan\JSPPD\app\VS\API\obj\Release\netcoreapp2.1\PubTmp\EFSQLScripts\API.Tables.Context.sql" />
 </sitemanifest>

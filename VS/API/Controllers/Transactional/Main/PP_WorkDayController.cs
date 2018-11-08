@@ -16,7 +16,7 @@ namespace API.Controllers.Transactional.Main
     public async Task<string> Get()
     {
       string employee = "eros";
-      string apiURL = @"https://employee-service.apps.cac.pcf.manulife.com:443/api/employee/firstNameLike/" + employee + "?limit=10";
+      string apiURL = @"https://employee-lookup-service-prod.apps.cac.pcf.manulife.com/api/employee/firstNameLike/" + employee + "?limit=10";
       string finalResult = "";
       HttpClient client = new HttpClient();
       //WebClient client = new WebClient();

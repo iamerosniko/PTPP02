@@ -47,9 +47,10 @@ namespace API
         // Apply CORS policy for any type of origin
         .AllowAnyMethod()
         // Apply CORS policy for any type of http methods
+        .SetPreflightMaxAge(new TimeSpan(0, 0, 0, 0, 0))
         .AllowAnyHeader()
-        // Apply CORS policy for any headers
-        .AllowCredentials());
+          // Apply CORS policy for any headers
+          .AllowCredentials());
         // Apply CORS policy for all users
       });
     }

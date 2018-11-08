@@ -126,7 +126,7 @@ GO
 IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180917125726_initialCreate')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20180917125726_initialCreate', N'2.1.3-rtm-32065');
+    VALUES (N'20180917125726_initialCreate', N'2.1.4-rtm-31024');
 END;
 
 GO
@@ -147,7 +147,7 @@ GO
 IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180917135017_m001')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20180917135017_m001', N'2.1.3-rtm-32065');
+    VALUES (N'20180917135017_m001', N'2.1.4-rtm-31024');
 END;
 
 GO
@@ -220,7 +220,7 @@ GO
 IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m002')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20180927171625_m002', N'2.1.3-rtm-32065');
+    VALUES (N'20180927171625_m002', N'2.1.4-rtm-31024');
 END;
 
 GO
@@ -293,7 +293,7 @@ GO
 IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20180927171625_m02')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20180927171625_m02', N'2.1.3-rtm-32065');
+    VALUES (N'20180927171625_m02', N'2.1.4-rtm-31024');
 END;
 
 GO
@@ -301,7 +301,7 @@ GO
 IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181002115004_m004')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20181002115004_m004', N'2.1.3-rtm-32065');
+    VALUES (N'20181002115004_m004', N'2.1.4-rtm-31024');
 END;
 
 GO
@@ -322,7 +322,7 @@ GO
 IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181002115824_m005')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20181002115824_m005', N'2.1.3-rtm-32065');
+    VALUES (N'20181002115824_m005', N'2.1.4-rtm-31024');
 END;
 
 GO
@@ -337,7 +337,7 @@ GO
 IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181002120117_m006')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20181002120117_m006', N'2.1.3-rtm-32065');
+    VALUES (N'20181002120117_m006', N'2.1.4-rtm-31024');
 END;
 
 GO
@@ -365,7 +365,7 @@ GO
 IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181005134711_m007')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20181005134711_m007', N'2.1.3-rtm-32065');
+    VALUES (N'20181005134711_m007', N'2.1.4-rtm-31024');
 END;
 
 GO
@@ -394,7 +394,7 @@ GO
 IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181005143241_m008')
 BEGIN
     INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20181005143241_m008', N'2.1.3-rtm-32065');
+    VALUES (N'20181005143241_m008', N'2.1.4-rtm-31024');
 END;
 
 GO
