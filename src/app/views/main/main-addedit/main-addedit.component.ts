@@ -11,7 +11,7 @@ import { ContactService, ProjectDependenciesService } from '../../../services/se
 export class MainAddeditComponent implements OnInit {
   public WDEmployees: EmployeeData = { data : [] }
   public selectedItems:SelectItem[] = [];
-  public active_tags:SelectItem[] = [{id:'a',text:'banana'}];
+  public active_tags:SelectItem[] = [];
   categories:Category[];
   centricScores:CentricScore[];
   mapCodes:MapCode[];
