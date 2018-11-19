@@ -1,16 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Routes, ActivatedRoute } from '@angular/router';
 import { ProjectDependenciesService,ContactService } from '../../../services/services';
-import { Category,CentricScore,MapCode,Department,Contact,WorkdayContact,WorkdayFormat,ProjectDependencies,SelectItem  } from '../../../entities/entities';
+import { Category,CentricScore,MapCode,Department,Contact,WorkdayContact,WorkdayFormat,ProjectDependencies,SelectItem, EmployeeLookup, EmployeeData  } from '../../../entities/entities';
 @Component({
   selector: 'app-main-addedit',
   templateUrl: './main-addedit.component.html',
   styleUrls: ['./main-addedit.component.css']
 })
 export class MainAddeditComponent implements OnInit {
-  public WDFormat:WorkdayFormat={};
-  public WDContacts2:WorkdayContact[]
-  public WDContacts:WorkdayContact[]
+  public WDEmployees: EmployeeData = { data : [] }
+  public selectedItems:SelectItem[] = [];
+  public active_tags:SelectItem[] = [{id:'a',text:'banana'}];
+  categories:Category[];
+  centricScores:CentricScore[];
+  mapCodes:MapCode[];
+  departments:Department[];
+  contacts:Contact[];
+  public items:Array<any> = [];
 
   mainBack(){
     this.router.navigate(['../Projects'])
@@ -26,17 +32,9 @@ export class MainAddeditComponent implements OnInit {
 
 
 
-  constructor(private router:Router,private consvc:ContactService, private pdSvc:ProjectDependenciesService) { }
-  public selectedItems:SelectItem[] = [];
-  public active_tags:SelectItem[] = [{id:'a',text:'banana'}];
-
-  categories:Category[];
-  centricScores:CentricScore[];
-  mapCodes:MapCode[];
-  departments:Department[];
-  contacts:Contact[];
-  public items:Array<any> = [
-    ]
+  constructor(private router:Router,private consvc:ContactService, private pdSvc:ProjectDependenciesService) { 
+  }
+  
   projectDependencies:ProjectDependencies;
   async ngOnInit() {
     this.projectDependencies=await this.pdSvc.getDependencies();
@@ -45,36 +43,20 @@ export class MainAddeditComponent implements OnInit {
     this.mapCodes=await this.projectDependencies.MapCodes;
     this.departments=await this.projectDependencies.Departments;
     this.contacts=await this.projectDependencies.Contacts;
-    await this.prepareMultipleLists();
   }
 
   async onSearchChange(searchValue : string ) {  
-    console.log(searchValue);
-    console.log(JSON.stringify(this.active_tags))
-
+    // console.log(JSON.stringify(this.active_tags))
+    this.WDEmployees.data=[];
+    this.WDEmployees=<EmployeeData>await this.consvc.getWorkday(searchValue,100);
     // console.log(await this.consvc.getWorkday(searchValue));
-    this.WDFormat=<WorkdayFormat>await this.consvc.getWorkday(searchValue,100);
-    this.WDContacts2=<WorkdayContact[]>await this.WDFormat.data;
-    console.log(<WorkdayContact[]>this.WDContacts2)
-    this.WDContacts=[];
-    this.WDContacts2.forEach(element => {
-      this.WDContacts.push({full_name:element.full_name})
+    this.items=await [];
+
+    this.WDEmployees.data.forEach(async contact => {
+      this.items.push({ 'id': contact.emplid, 'text':contact.full_name})
     });
   }
 
-  async prepareMultipleLists(){
-    this.items=[];
-    this.contacts.forEach( contact => {
-      this.items.push({ 'id': contact.ContactID, 'text':contact.ContactName+ ' ' + contact.LastName})
-      // this.items.push(new SelectItem(contact.CategoryID,contact.Category))
-      // this.items.push(contact.ContactName + ' ' + contact.LastName )
-    });
-
-    await console.log(this.items)
-  
-    // console.log(await this.consvc.getWorkday('eros'));
-  }
-  
   //ng2-select on select
   // public refreshValue(value:any):void {
   //   this.selectedItems = value;

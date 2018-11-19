@@ -29,6 +29,6 @@ export class ProjectcategoryListComponent implements OnInit {
   }
 
   async getDependencies(){
-    this.categories = (await this.catSvc.getCategories()).subscribe(x=>this.categories);
+    this.categories = await this.catSvc.getCategories();
   }
 }

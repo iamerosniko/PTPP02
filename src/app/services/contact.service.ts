@@ -3,7 +3,7 @@
 import { Injectable } from '@angular/core';
 import { ClientApiService } from './clientapi.service'; 
 import { ClientApiSettings } from './clientapi.settings'; 
-import { Contact } from '../entities/entities';
+import { EmployeeData,Contact } from '../entities/entities';
 
 @Injectable()
 export class ContactService {
@@ -21,6 +21,9 @@ export class ContactService {
   }
 
   getWorkday(employee:string, viewNumberOfPeople:number){
+    if(employee.trim()==""){
+      return <EmployeeData>{data:[] }
+    }
     this.api.normalHeader(); 
     this.api.apiUrl=ClientApiSettings.GETCLIENTAPIURL("WD")+"/"+employee+"/"+viewNumberOfPeople;
     return this.api.getAll();

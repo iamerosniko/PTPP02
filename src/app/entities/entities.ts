@@ -110,3 +110,14 @@ export class SelectItem{
         public text?: string
     ){}
 }
+
+export interface EmployeeLookup{
+    email_external ?: string,
+    emplid ?: string,
+    full_name ?: string,
+    workday_user_name ?: string
+}
+
+export interface EmployeeData{
+    data:EmployeeLookup[];
+}

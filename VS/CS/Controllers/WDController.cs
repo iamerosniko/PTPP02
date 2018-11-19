@@ -25,7 +25,7 @@ namespace CS.Controllers
     [HttpGet("{id}/{display}", Name = "Get")]
     public async Task<dynamic> Get([FromRoute]string id, [FromRoute]int display)
     {
-      string apiURL = @"https://employee-lookup-service-prod.apps.cac.pcf.manulife.com/api/employee/firstNameLike/" + id + "?limit=" + display;
+      string apiURL = @"https://employee-lookup-service-prod.apps.cac.pcf.manulife.com/api/employee/fullNameLike/" + id + "?limit=" + display;
       string finalResult = "";
       HttpClient client = new HttpClient();
       try
