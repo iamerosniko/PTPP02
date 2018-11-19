@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Projects } from '../../entities/entities';
+
 @Component({
   selector: 'app-main',
   templateUrl: './main-project.component.html',
@@ -15,7 +17,8 @@ export class MainProjectComponent  {
   constructor(private router:Router) { }
 
   ngOnInit() {
-
+    console.log(<Projects> JSON.parse(sessionStorage.getItem("projects")));
+    
   
   }
  

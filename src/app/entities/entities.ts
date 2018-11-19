@@ -30,14 +30,6 @@ export interface Contact {
     GroupName ?: string,
 }
 
-export interface WorkdayContact{
-    full_name?:string
-}
-
-export interface WorkdayFormat{
-    data?:WorkdayContact[]
-}
-
 export interface ProjectDependencies{
     Contacts?: Contact[],
     Departments?:Department[],

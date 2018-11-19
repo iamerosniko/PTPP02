@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, Routes, ActivatedRoute } from '@angular/router';
-import { ProjectDependenciesService,ContactService } from '../../../services/services';
-import { Category,CentricScore,MapCode,Department,Contact,WorkdayContact,WorkdayFormat,ProjectDependencies,SelectItem, EmployeeLookup, EmployeeData  } from '../../../entities/entities';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Category, CentricScore, Contact, Department, EmployeeData, MapCode, ProjectDependencies, SelectItem, Projects } from '../../../entities/entities';
+import { ContactService, ProjectDependenciesService } from '../../../services/services';
 @Component({
   selector: 'app-main-addedit',
   templateUrl: './main-addedit.component.html',
@@ -17,11 +18,18 @@ export class MainAddeditComponent implements OnInit {
   departments:Department[];
   contacts:Contact[];
   public items:Array<any> = [];
+  project:Projects={Status:"In Progress", ProjectID:"1663dcc7-0787-46a2-b869-af3fa716684f"};  
+
+  projectForm : FormGroup;
 
   mainBack(){
     this.router.navigate(['../Projects'])
   }
   save(){
+    console.log(this.project);
+    var a = JSON.stringify(this.project);
+
+    sessionStorage.setItem("Projects",a)
     var ans = confirm("No Tasks added. Do you want to add project task first?");
     ans ? this.router.navigate(['../Projects/MainTasks']) : (alert('Project Successfully saved'), this.router.navigate(['../Projects']));
   }
@@ -32,7 +40,16 @@ export class MainAddeditComponent implements OnInit {
 
 
 
-  constructor(private router:Router,private consvc:ContactService, private pdSvc:ProjectDependenciesService) { 
+  constructor(private router:Router,private consvc:ContactService, private pdSvc:ProjectDependenciesService,
+    private fb:FormBuilder) { 
+    this.projectForm = this.fb.group({
+      StakeHolder:[]
+    });
+    this.projectForm.valueChanges.subscribe(()=>{
+      var Value = this.projectForm.controls['StakeHolder'].value
+      console.log(Value);
+
+    });
   }
   
   projectDependencies:ProjectDependencies;
@@ -48,9 +65,10 @@ export class MainAddeditComponent implements OnInit {
   async onSearchChange(searchValue : string ) {  
     // console.log(JSON.stringify(this.active_tags))
     this.WDEmployees.data=[];
-    this.WDEmployees=<EmployeeData>await this.consvc.getWorkday(searchValue,100);
+    this.WDEmployees=<EmployeeData>await this.consvc.getWorkday(searchValue,15);
     // console.log(await this.consvc.getWorkday(searchValue));
     this.items=await [];
+
 
     this.WDEmployees.data.forEach(async contact => {
       this.items.push({ 'id': contact.emplid, 'text':contact.full_name})
