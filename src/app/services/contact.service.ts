@@ -20,9 +20,9 @@ export class ContactService {
     return this.api.getAll();
   }
 
-  getWorkday(employee:string){
+  getWorkday(employee:string, viewNumberOfPeople:number){
     this.api.normalHeader(); 
-    this.api.apiUrl="https://employee-lookup-service-prod.apps.cac.pcf.manulife.com/api/employee/firstNameLike/"+employee+"?limit=10"
+    this.api.apiUrl=ClientApiSettings.GETCLIENTAPIURL("WD")+"/"+employee+"/"+viewNumberOfPeople;
     return this.api.getAll();
   }
 

@@ -53,7 +53,7 @@ export class MainAddeditComponent implements OnInit {
     console.log(JSON.stringify(this.active_tags))
 
     // console.log(await this.consvc.getWorkday(searchValue));
-    this.WDFormat=<WorkdayFormat>await this.consvc.getWorkday(searchValue);
+    this.WDFormat=<WorkdayFormat>await this.consvc.getWorkday(searchValue,100);
     this.WDContacts2=<WorkdayContact[]>await this.WDFormat.data;
     console.log(<WorkdayContact[]>this.WDContacts2)
     this.WDContacts=[];
@@ -72,7 +72,7 @@ export class MainAddeditComponent implements OnInit {
 
     await console.log(this.items)
   
-    console.log(await this.consvc.getWorkday('eros'));
+    // console.log(await this.consvc.getWorkday('eros'));
   }
   
   //ng2-select on select

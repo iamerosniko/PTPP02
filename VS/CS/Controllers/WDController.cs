@@ -1,4 +1,7 @@
+using CS.DTO;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -7,6 +10,7 @@ using System.Threading.Tasks;
 namespace CS.Controllers
 {
   [Route("api/[controller]")]
+  [EnableCors("CORS")]
   [ApiController]
   public class WDController : ControllerBase
   {
@@ -18,10 +22,10 @@ namespace CS.Controllers
     }
 
     // GET: api/WD/5
-    [HttpGet("{id}", Name = "Get")]
-    public async Task<string> Get(string id)
+    [HttpGet("{id}/{display}", Name = "Get")]
+    public async Task<dynamic> Get([FromRoute]string id, [FromRoute]int display)
     {
-      string apiURL = @"https://employee-lookup-service-prod.apps.cac.pcf.manulife.com/api/employee/firstNameLike/" + id + "?limit=10";
+      string apiURL = @"https://employee-lookup-service-prod.apps.cac.pcf.manulife.com/api/employee/firstNameLike/" + id + "?limit=" + display;
       string finalResult = "";
       HttpClient client = new HttpClient();
       try
@@ -38,7 +42,9 @@ namespace CS.Controllers
       {
         return ex.ToString();
       }
-      return finalResult;
+      var a = JsonConvert.DeserializeObject<EmployeeLookUp>(finalResult);
+
+      return a;
     }
 
     // POST: api/WD

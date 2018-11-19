@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 namespace API.Controllers.Maintenance
 {
   [EnableCors("CORS")]
-
   [Produces("application/json")]
   [Route("api/PP_Categories")]
   public class PP_CategoriesController : Controller
