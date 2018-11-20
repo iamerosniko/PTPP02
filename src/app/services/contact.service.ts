@@ -29,6 +29,15 @@ export class ContactService {
     return this.api.getAll();
   }
 
+  getWorkday2(employee:string, viewNumberOfPeople:number){
+    if(employee.trim()==""){
+      return [];
+    }
+    this.api.normalHeader(); 
+    this.api.apiUrl=ClientApiSettings.GETCLIENTAPIURL("WD")+"/test/"+employee+"/"+viewNumberOfPeople;
+    return this.api.getAll();
+  }
+
   getContact(id: string) {
     this.api.normalHeader();
     this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Contacts")

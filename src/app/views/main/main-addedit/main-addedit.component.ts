@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Category, CentricScore, Contact, Department, EmployeeData, MapCode, ProjectDependencies, SelectItem, Projects } from '../../../entities/entities';
 import { ContactService, ProjectDependenciesService } from '../../../services/services';
+import { UUID } from 'angular2-uuid'
 @Component({
   selector: 'app-main-addedit',
   templateUrl: './main-addedit.component.html',
@@ -18,7 +19,10 @@ export class MainAddeditComponent implements OnInit {
   departments:Department[];
   contacts:Contact[];
   public items:Array<any> = [];
-  project:Projects={Status:"In Progress", ProjectID:"1663dcc7-0787-46a2-b869-af3fa716684f"};  
+  project:Projects={
+    Status:"In Progress", 
+    ProjectID: UUID.UUID()
+  };  
 
   projectForm : FormGroup;
 
@@ -62,17 +66,13 @@ export class MainAddeditComponent implements OnInit {
     this.contacts=await this.projectDependencies.Contacts;
   }
 
-  async onSearchChange(searchValue : string ) {  
-    // console.log(JSON.stringify(this.active_tags))
-    this.WDEmployees.data=[];
-    this.WDEmployees=<EmployeeData>await this.consvc.getWorkday(searchValue,15);
-    // console.log(await this.consvc.getWorkday(searchValue));
-    this.items=await [];
-
-
-    this.WDEmployees.data.forEach(async contact => {
-      this.items.push({ 'id': contact.emplid, 'text':contact.full_name})
-    });
+  async onSearchChange(event:any,searchValue : string ) {  
+    try{
+      this.items = <SelectItem[]>await this.consvc.getWorkday2(searchValue,20)
+    }
+    catch{
+      
+    }
   }
 
   //ng2-select on select

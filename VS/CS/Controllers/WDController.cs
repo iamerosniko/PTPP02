@@ -14,15 +14,9 @@ namespace CS.Controllers
   [ApiController]
   public class WDController : ControllerBase
   {
-    // GET: api/WD
-    [HttpGet]
-    public IEnumerable<string> Get()
-    {
-      return new string[] { "value1", "value2" };
-    }
 
     // GET: api/WD/5
-    [HttpGet("{id}/{display}", Name = "Get")]
+    [HttpGet("{id}/{display}")]
     public async Task<dynamic> Get([FromRoute]string id, [FromRoute]int display)
     {
       string apiURL = @"https://employee-lookup-service-prod.apps.cac.pcf.manulife.com/api/employee/fullNameLike/" + id + "?limit=" + display;
@@ -47,22 +41,36 @@ namespace CS.Controllers
       return a;
     }
 
-    // POST: api/WD
-    [HttpPost]
-    public void Post([FromBody] string value)
+    [HttpGet("test/{id}/{display}")]
+    public async Task<dynamic> Get2([FromRoute]string id, [FromRoute]int display)
     {
-    }
+      string apiURL = @"https://employee-lookup-service-prod.apps.cac.pcf.manulife.com/api/employee/fullNameLike/" + id + "?limit=" + display;
+      string finalResult = "";
+      HttpClient client = new HttpClient();
+      try
+      {
+        var request = await client.GetAsync(apiURL);
+        if (request.IsSuccessStatusCode)
+        {
+          var result = request.Content.ReadAsStringAsync().Result;
 
-    // PUT: api/WD/5
-    [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
-    {
-    }
+          finalResult = result;
+        }
+      }
+      catch (Exception ex)
+      {
+        return ex.ToString();
+      }
+      var a = JsonConvert.DeserializeObject<EmployeeLookUp>(finalResult);
 
-    // DELETE: api/ApiWithActions/5
-    [HttpDelete("{id}")]
-    public void Delete(int id)
-    {
+      List<NGSelect2> ng2 = new List<NGSelect2>();
+
+      foreach (var b in a.data)
+      {
+        ng2.Add(new NGSelect2 { id = b.emplid, text = b.full_name });
+      }
+
+      return ng2;
     }
   }
 }

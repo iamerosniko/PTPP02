@@ -75,7 +75,7 @@
                   <!-- <select type="text" class="form-control ng-untouched ng-pristine ng-valid" ></select> -->
                   <ng-select
                       [(ngModel)]="project.ProjectSponsor" 
-                      (input)="onSearchChange($event.target.value)"
+                      (keyup)="onSearchChange($event,$event.target.value)"
                       [multiple]="true"
                       [active]="active_tags"
                       [allowClear]="true"
@@ -88,7 +88,7 @@
                   <label class="control-label">Project Manager</label>
                   <ng-select
                       [(ngModel)]="project.ProjectCategoryID" 
-                      (input)="onSearchChange($event.target.value)"
+                      (keyup)="onSearchChange($event,$event.target.value)"
                       [multiple]="true"
                       [allowClear]="true"
                       [items]="items"
@@ -101,6 +101,7 @@
                   <!-- <input /> -->
                   <!-- {{WDEmployees | json}} -->
                   <ng-select
+                      (keyup)="onSearchChange($event,$event.target.value)"
                       [multiple]="true"
                       [active]="active_tags"
                       [allowClear]="true"
