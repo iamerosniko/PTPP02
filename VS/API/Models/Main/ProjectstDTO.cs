@@ -22,9 +22,9 @@ namespace API.Models.Main
     //json strings
     public string Status { get; set; } //disabled
     public int NumberOfTasks { get; set; } //disabled
-    public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
-    public DateTime ProjectTargetDate { get; set; }
+    public string StartDate { get; set; }
+    public string EndDate { get; set; }
+    public string ProjectTargetDate { get; set; }
     public bool EndDateChanged { get; set; } //disabled
     public string GroupName { get; set; }
 

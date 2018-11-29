@@ -50,7 +50,10 @@ const routes: Routes = [
     path:'Projects',component:MainProjectComponent,
   },
   {
-    path: 'Projects/MainNew', component: MainAddeditComponent
+    path: 'Projects/Details', component: MainAddeditComponent
+  },
+  {
+    path: 'Projects/Details/:projectID', component: MainAddeditComponent
   },
   {
     path: 'Projects/MainTasks', component: MainTasksComponent

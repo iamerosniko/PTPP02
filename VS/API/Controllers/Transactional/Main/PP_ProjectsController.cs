@@ -39,21 +39,25 @@ namespace API.Controllers.Transactional.Main
         ProjectstDTO project = new ProjectstDTO
         {
           Status = proj.Status,
+          ProjectCategoryID = proj.ProjectCategoryID,
           Category = categoryList.Find(x => x.CategoryID == proj.ProjectCategoryID).Category,
+          CustomerCentricScoreID = proj.CustomerCentricScoreID,
           Score = scores.Find(x => x.CentricScoreID == proj.CustomerCentricScoreID).Score,
+          DepartmentID = proj.DepartmentID,
           Department = departments.Find(x => x.DepartmentID == proj.DepartmentID).Department,
-          EndDate = proj.EndDate,
+          EndDate = proj.EndDate.ToShortDateString(),
           EndDateChanged = proj.EndDateChanged,
           GroupName = proj.GroupName,
           MapCode = mapCodes.Find(x => x.MapCodeID == proj.CustomerMapCodeID).MapCode,
+          CustomerMapCodeID = proj.CustomerMapCodeID,
           NumberOfTasks = proj.NumberOfTasks,
           ProjectManager = proj.ProjectManager,
           ProjectOverview = proj.ProjectOverview,
           ProjectSponsor = proj.ProjectSponsor,
           ProjectNumber = proj.ProjectNumber,
           ProjectStakeHolder = proj.ProjectStakeHolder,
-          ProjectTargetDate = proj.ProjectTargetDate,
-          StartDate = proj.StartDate,
+          ProjectTargetDate = proj.ProjectTargetDate.ToShortDateString(),
+          StartDate = proj.StartDate.ToShortDateString(),
           ProjectID = proj.ProjectID
         };
 
@@ -75,14 +79,44 @@ namespace API.Controllers.Transactional.Main
         return BadRequest(ModelState);
       }
 
-      var pP_Projects = await _context.Projects.SingleOrDefaultAsync(m => m.ProjectID == id);
+      var proj = await _context.Projects.SingleOrDefaultAsync(m => m.ProjectID == id);
 
-      if (pP_Projects == null)
+      if (proj == null)
       {
         return NotFound();
       }
+      var categoryList = _context.Categories.ToList();
+      var scores = _context.CentricScores.ToList();
+      var mapCodes = _context.MapCodes.ToList();
+      var departments = _context.Departments.ToList();
 
-      return Ok(pP_Projects);
+      ProjectstDTO project = new ProjectstDTO
+      {
+        Status = proj.Status,
+        ProjectCategoryID = proj.ProjectCategoryID,
+        Category = categoryList.Find(x => x.CategoryID == proj.ProjectCategoryID).Category,
+        CustomerCentricScoreID = proj.CustomerCentricScoreID,
+        Score = scores.Find(x => x.CentricScoreID == proj.CustomerCentricScoreID).Score,
+        DepartmentID = proj.DepartmentID,
+        Department = departments.Find(x => x.DepartmentID == proj.DepartmentID).Department,
+        EndDate = proj.EndDate.ToShortDateString(),
+        EndDateChanged = proj.EndDateChanged,
+        GroupName = proj.GroupName,
+        MapCode = mapCodes.Find(x => x.MapCodeID == proj.CustomerMapCodeID).MapCode,
+        CustomerMapCodeID = proj.CustomerMapCodeID,
+        NumberOfTasks = proj.NumberOfTasks,
+        ProjectManager = proj.ProjectManager,
+        ProjectOverview = proj.ProjectOverview,
+        ProjectSponsor = proj.ProjectSponsor,
+        ProjectNumber = proj.ProjectNumber,
+        ProjectStakeHolder = proj.ProjectStakeHolder,
+        ProjectTargetDate = proj.ProjectTargetDate.ToShortDateString(),
+        StartDate = proj.StartDate.ToShortDateString(),
+        ProjectID = proj.ProjectID
+      };
+
+
+      return Ok(project);
     }
 
     // PUT: api/PP_Projects/5

@@ -4,9 +4,7 @@ export class ClientApiSettings {
     private static Client_URL = "https://localhost:44370/api/"
     //change the url according for business workflow urls
     private static API_URL = "https://pplapid.azurewebsites.net/api/"
-    // private static API_URL = "http://localhost:58109/api/"
-    //  private static API_URL = "http://btaccessmanagementbw-dev.azurewebsites.net/api/"
-    // private static API_URL = "http://btamdev.azurewebsites.net/api/"
+    // private static API_URL = "http://localhost:52013/api/"
 
     //Use this Method when calling an business_workflow apis
     public static GETAPIURL(controller:string):string{

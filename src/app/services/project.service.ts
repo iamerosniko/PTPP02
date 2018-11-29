@@ -14,33 +14,34 @@ export class ProjectService {
     //api.authorizedHeader();
   }
 
-  getMapcodes() {
+  getProjects() {
     this.api.normalHeader();
     this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Projects")
     return this.api.getAll();
   }
 
-  getMapcode(id: string) {
+  getProject(id: string) {
     this.api.normalHeader();
     this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Projects")
     return this.api.getOne(id);
   }
 
-  postMapcode(data: Projects) {
+  postProject(data: Projects) {
+    console.log(data)
     this.api.normalHeader();
     this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Projects")
     var body = JSON.stringify(data);
     return this.api.postData(body);
   } 
 
-  putMapcode(data: Projects) {
+  putProject(data: Projects) {
     this.api.normalHeader();
     this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Projects")
     var body = JSON.stringify(data);
     return this.api.putData(data.ProjectID.toString(),body );
   }
 
-  deleteMapcode(id: string) {
+  deleteProject(id: string) {
     this.api.normalHeader();
     this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Projects")
     return this.api.deleteData(id);

@@ -8,7 +8,7 @@ import { Router, Routes, ActivatedRoute } from '@angular/router';
 })
 export class MainTasksComponent implements OnInit {
 mainBack(){
-    this.router.navigate(['../Projects/MainNew'])
+    this.router.navigate(['../Projects/Details'])
 }
   constructor(private router:Router) { }
 
