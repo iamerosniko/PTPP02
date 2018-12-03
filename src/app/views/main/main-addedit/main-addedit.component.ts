@@ -38,6 +38,11 @@ export class MainAddeditComponent implements OnInit {
     this.router.navigate(['../Projects'])
   }
 
+  goToTask(){
+    // this.aProjectManager=[];
+    this.router.navigate(['../Projects/Tasks',this.project.ProjectID]);
+  }
+
   async save(){
     this.project.ProjectManager= JSON.stringify(this.aProjectManager);
     this.project.ProjectSponsor= JSON.stringify(this.aProjectSponsor);
@@ -56,13 +61,6 @@ export class MainAddeditComponent implements OnInit {
     // var ans = confirm("No Tasks added. Do you want to add project task first?");
     // ans ? this.router.navigate(['../Projects/MainTasks']) : (alert('Project Successfully saved'), this.router.navigate(['../Projects']));
   }
-
-  goToTask(){
-    // this.aProjectManager=[];
-    this.router.navigate(['../Projects/MainTasks']);
-  }
-
-
 
   constructor(private router:Router, private activatedroute: ActivatedRoute,
     private consvc:ContactService, private pdSvc:ProjectDependenciesService,

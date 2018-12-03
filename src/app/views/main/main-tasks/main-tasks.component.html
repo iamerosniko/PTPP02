@@ -15,100 +15,71 @@
   </div>
   <div class="row col-md-12">
     <br />
-    <div class="row col-md-12">
-      <div class="col-md-1"></div>
-      <div class="col-md-11">
-        <div class="row">
-          <div class="col-md-1"><label class="control-label">
-              Search:</label>
-          </div>
-          <div class="col-md-10">
-            <input id="textarea" type="text" maxlength="250" class="form-control ng-untouched ng-pristine ng-valid"
-              placeholder="Search Tasks" />
-          </div>
-          <div class="col-md-1">
-            <a class="btn btn-default btn-sm" title="Delete">
-              <i class="fa fa-search"></i>Search
-            </a>
-          </div>
-          <div class="col-md-12">
-            <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -45px; " />
-          </div>
+    <div class="row col-md-6">
+      test
+    </div>
+    <div class="row col-md-6">
+      <div class="row col-md-12">
+        <label class="control-label">Tasks</label>
+      </div>
+      <div class="row col-md-12">
+        <div class="col-md-2"><label class="control-label">
+            Search:</label>
         </div>
-        <div id="tables" class="row col-md-12">
-          <div class="row col-md-12">
-            <label class="control-label">Tasks</label>
-            <div id="table" class="table-responsive">
-              <table class="table table-bordered table-striped table-hover input-sm">
-                <thead>
-                  <tr>
-                    <th class="col-md-6">Task Description</th>
-                    <th class="col-md-2">Status</th>
-                    <th class="col-md-4">Actions</th>
-                  </tr>
-                  <!-- style="width: 60%;"> -->
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Task 1</td>
-                    <td>In Progress</td>
-                    <td align="center">
-                      <div class="btn-group">
-                        <a class="btn btn-primary btn-xs" data-toggle="tab" data-target="#dep_editor" title="More Details">D</a>
-                        <a class="btn btn-primary btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit">P</a>
-                        <a class="btn btn-default btn-xs" title="Delete">C</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Task 2</td>
-                    <td>Completed</td>
-                    <td align="center">
-                      <div class="btn-group">
-                        <a class="btn btn-primary btn-xs" data-toggle="tab" data-target="#dep_editor" title="More Details">D</a>
-                        <a class="btn btn-primary btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit">P</a>
-                        <a class="btn btn-primary btn-xs" title="Delete">C</a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Task 2 additional</td>
-                    <td>Upcoming</td>
-                    <td align="center">
-                      <div class="btn-group">
-                        <a class="btn btn-primary btn-xs" data-toggle="tab" data-target="#dep_editor" title="More Details">D</a>
-                        <a class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="Edit">P</a>
-                        <a class="btn btn-default btn-xs" title="Delete">C</a>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -45px; " />
-          </div>
-          <div class="col-md-1">
-            <label class="control-label">Task Description:</label>
-          </div>
-          <div class="col-md-10">
-            <textarea id="textarea" type="text" maxlength="250" class="form-control ng-untouched ng-pristine ng-valid"
-              placeholder="Add Task">
-
-            </textarea>
-          </div>
-          <div class="col-md-1">
-            <a class="btn btn-default btn-sm" title="Delete">
-              <i class="fa fa-plus"></i>Add
-            </a>
-          </div>
+        <div class="col-md-10">
+          <input id="textarea" type="text" class="form-control" placeholder="Search Tasks" />
         </div>
       </div>
+      <div class="row col-md-12">
+        <br />
+      </div>
+      <div id="table" class="row col-md-12">
+        <table class="table table-bordered table-striped table-hover input-sm">
+          <thead>
+            <tr>
+              <th class="col-md-6">Task Description</th>
+              <th class="col-md-2">Status</th>
+              <th class="col-md-4">Actions</th>
+            </tr>
+            <!-- style="width: 60%;"> -->
+          </thead>
+          <tbody>
+            <tr>
+              <td>Task 1</td>
+              <td>In Progress</td>
+              <td align="center">
+                <select>
+                  <option>
+                    Active
+                  </option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Task 2</td>
+              <td>Completed</td>
+              <td align="center">
+                <select>
+                  <option>
+                    Active
+                  </option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Task 2 additional</td>
+              <td>Upcoming</td>
+              <td align="center">
+                <select>
+                  <option>
+                    Active
+                  </option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-
-
     <!-- </div> -->
   </div>
