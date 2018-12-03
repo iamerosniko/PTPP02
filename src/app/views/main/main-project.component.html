@@ -1,23 +1,24 @@
 <div id="dep_default" class="tab-pane fade in active">
-    <div class="col-md-12">
-      <div class="row col-md-12">
-        <h3>Main</h3>
-        <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -45px; " />
+  <div class="col-md-12">
+    <div class="row col-md-12">
+      <h3>Main</h3>
+      <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -45px; " />
+    </div>
+    <!--tool bar-->
+
+    <div id="banner" class="row col-md-12">
+      <div class="col-md-2">
+        <a href="#" (click)="newProject()" id="button" class="btn btn-primary btn-sm" data-toggle="tab" data-target="#dep_editor"><i
+            class="fa fa-plus"></i>&nbsp;New Record</a>
       </div>
-      <!--tool bar-->
-      
-      <div id="banner" class="row col-md-12">
-        <div class="col-md-2">
-          <a href="#" (click)="newProject()" id="button" class="btn btn-primary btn-sm" data-toggle="tab" data-target="#dep_editor"><i class="fa fa-plus"></i>&nbsp;New Record</a>
-        </div>
-        <div class="col-md-10"></div>
-      </div>
-      <br />
-      <!--table-->
-      <div class="row col-md-12">
+      <div class="col-md-10"></div>
+    </div>
+    <br />
+    <!--table-->
+    <div class="row col-md-12">
       <div class="col-md-12">
         <div class="table-responsive">
-        
+
           <table id="table" class="table table-bordered table-striped table-hover input-sm">
             <thead>
               <tr>
@@ -30,7 +31,7 @@
                 <th style="width: 10%;">Start Date</th>
                 <th style="width: 10%;">End Date</th>
                 <th style="width: 8%;">Actions</th>
-               
+
               </tr>
             </thead>
             <tbody>
@@ -45,7 +46,8 @@
                 <td>{{proj.EndDate | date }}</td>
                 <td align="center">
                   <div class="btn-group">
-                    <a (click)="editProject(proj)"  class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor" title="More Details"><i class="fa fa-search-plus"></i></a>
+                    <a (click)="editProject(proj)" class="btn btn-default btn-xs" data-toggle="tab" data-target="#dep_editor"
+                      title="More Details"><i class="fa fa-search-plus"></i></a>
                     <a (click)="delete(proj)" class="btn btn-default btn-xs" title="Delete"><i class="fa fa-trash"></i></a>
                   </div>
                 </td>
@@ -53,7 +55,7 @@
             </tbody>
           </table>
         </div>
-      
+
       </div>
       <div class="row">
         <div class="pull-right">

@@ -1,30 +1,37 @@
 <div class="col-md-12">
-    <div class="row">
-        <div class="col-md-12">
-            <h3>Maintenance</h3>
-            <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -15px; " />
-        </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Maintenance</h3>
+      <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -15px; " />
     </div>
-    <div class="row">
-        <!-- <div class="col-md-1"></div> -->
-        <!--nav pills-->
-        <div id="sidebanner" class="col-md-2">
-            <ul class="nav nav-pills nav-stacked">
-                <!-- <li role="presentation" ><a href="#menu1" data-toggle="tab"><i class="fa fa-table"></i>&nbsp;Main Table</a></li> -->
-                <li id="deptab" [routerLinkActive]="['active']" role="presentation"><a (click)="departmenttabclick()"  [routerLink]="['./', {outlets: {'mroute': ['Departments']}}]"><i class="fa fa-institution"></i>&nbsp;Department</a></li>
-                <li id="protab" [routerLinkActive]="['active']" role="presentation"><a (click)="projectcategorytabclick()" [routerLink]="['./', {outlets: {'mroute': ['ProjectCategories']}}]"><i class="fa fa-qrcode"></i>&nbsp;Project Category</a></li>
-                <li id="cmctab" [routerLinkActive]="['active']" role="presentation"><a (click)="customermapcodetabclick()" [routerLink]="['./', {outlets: {'mroute': ['CustomerMaps']}}]"><i class="fa fa-map-signs"></i>&nbsp;Customer Map Code</a></li>
-                <li id="ccstab" [routerLinkActive]="['active']" role="presentation"><a (click)="customercentricscoretabclick()" [routerLink]="['./', {outlets: {'mroute': ['CustomerCentrics']}}]"><i class="fa fa-balance-scale"></i>&nbsp;Customer Centric Score</a></li>
-                <!-- <li id="contab" [routerLinkActive]="['active']" role="presentation"><a (click)="contactstabclick()" [routerLink]="['./', {outlets: {'mroute': ['Contacts']}}]"><i class="fa fa-id-card-o"></i>&nbsp;Contacts</a></li> -->
-            </ul>
-            <br />
-        </div>
-        <!-- </div>
+  </div>
+  <div class="row">
+    <!-- <div class="col-md-1"></div> -->
+    <!--nav pills-->
+    <div id="sidebanner" class="col-md-2">
+      <ul class="nav nav-pills nav-stacked">
+        <!-- <li role="presentation" ><a href="#menu1" data-toggle="tab"><i class="fa fa-table"></i>&nbsp;Main Table</a></li> -->
+        <li id="deptab" [routerLinkActive]="['active']" role="presentation"><a (click)="departmenttabclick()"
+            [routerLink]="['./', {outlets: {'mroute': ['Departments']}}]"><i class="fa fa-institution"></i>&nbsp;Department</a></li>
+        <li id="protab" [routerLinkActive]="['active']" role="presentation"><a (click)="projectcategorytabclick()"
+            [routerLink]="['./', {outlets: {'mroute': ['ProjectCategories']}}]"><i class="fa fa-qrcode"></i>&nbsp;Project
+            Category</a></li>
+        <li id="cmctab" [routerLinkActive]="['active']" role="presentation"><a (click)="customermapcodetabclick()"
+            [routerLink]="['./', {outlets: {'mroute': ['CustomerMaps']}}]"><i class="fa fa-map-signs"></i>&nbsp;Customer
+            Map Code</a></li>
+        <li id="ccstab" [routerLinkActive]="['active']" role="presentation"><a (click)="customercentricscoretabclick()"
+            [routerLink]="['./', {outlets: {'mroute': ['CustomerCentrics']}}]"><i class="fa fa-balance-scale"></i>&nbsp;Customer
+            Centric Score</a></li>
+        <!-- <li id="contab" [routerLinkActive]="['active']" role="presentation"><a (click)="contactstabclick()" [routerLink]="['./', {outlets: {'mroute': ['Contacts']}}]"><i class="fa fa-id-card-o"></i>&nbsp;Contacts</a></li> -->
+      </ul>
+      <br />
+    </div>
+    <!-- </div>
         <div class="row"> -->
-        <div class="col-md-10">
-            <div class="tab-content">
-                <router-outlet name="mroute"></router-outlet>
-            </div>
-        </div>
+    <div class="col-md-10">
+      <div class="tab-content">
+        <router-outlet name="mroute"></router-outlet>
+      </div>
     </div>
+  </div>
 </div>
