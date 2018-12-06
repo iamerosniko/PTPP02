@@ -399,3 +399,22 @@ END;
 
 GO
 
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181204195003_m009')
+BEGIN
+    CREATE TABLE [PP_TaskStatuses] (
+        [TaskStatusID] int NOT NULL IDENTITY,
+        [TaskStatus] nvarchar(max) NULL,
+        CONSTRAINT [PK_PP_TaskStatuses] PRIMARY KEY ([TaskStatusID])
+    );
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20181204195003_m009')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20181204195003_m009', N'2.1.4-rtm-31024');
+END;
+
+GO
+

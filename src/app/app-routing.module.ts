@@ -56,7 +56,7 @@ const routes: Routes = [
     path: 'Projects/Details/:projectID', component: MainAddeditComponent
   },
   {
-    path: 'Projects/MainTasks/:projectID', component: MainTasksComponent
+    path: 'Projects/Tasks/:projectID', component: MainTasksComponent
   },
   {
     path: 'Projects/MainDelete', component: MainDeleteComponent

@@ -1,9 +1,9 @@
 <div class="col-md-12">
   <div class="row col-md-12">
-    <h3>Main</h3>
+    <h3>Tasks</h3>
     <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -45px; " />
   </div>
-  <label style="color: red">Currently in progress UI Refining.</label>
+  <label style="color: red">Currently in progress : General functionality</label>
 
   <div class="row col-md-12">
     <div class="col-md-3">
@@ -16,70 +16,52 @@
   <div class="row col-md-12">
     <br />
     <div class="row col-md-6">
-      test
+      <div class="row col-md-2">
+        <label class="control-label">New Task : </label>
+      </div>
+      <div class="row col col-md-8">
+        <input type="text" class="form-control" [(ngModel)]="task.TaskDesc" placeholder="Description">
+      </div>
+      <div class="row col col-md-2">
+        <input type="button" class="btn btn-primary btn-sm" value="Add" (click)="addNew()">
+      </div>
     </div>
     <div class="row col-md-6">
-      <div class="row col-md-12">
-        <label class="control-label">Tasks</label>
+      <div class="col-md-2"><label class="control-label">
+          Search :</label>
       </div>
-      <div class="row col-md-12">
-        <div class="col-md-2"><label class="control-label">
-            Search:</label>
-        </div>
-        <div class="col-md-10">
-          <input id="textarea" type="text" class="form-control" placeholder="Search Tasks" />
-        </div>
+      <div class="col-md-10">
+        <input id="text" (keyup)="searchTaskDescription()" [(ngModel)]="searchTask" type="text" class="form-control" placeholder="Search Tasks" />
       </div>
-      <div class="row col-md-12">
-        <br />
-      </div>
-      <div id="table" class="row col-md-12">
-        <table class="table table-bordered table-striped table-hover input-sm">
-          <thead>
-            <tr>
-              <th class="col-md-6">Task Description</th>
-              <th class="col-md-2">Status</th>
-              <th class="col-md-4">Actions</th>
-            </tr>
-            <!-- style="width: 60%;"> -->
-          </thead>
-          <tbody>
-            <tr>
-              <td>Task 1</td>
-              <td>In Progress</td>
-              <td align="center">
-                <select>
-                  <option>
-                    Active
-                  </option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>Task 2</td>
-              <td>Completed</td>
-              <td align="center">
-                <select>
-                  <option>
-                    Active
-                  </option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <td>Task 2 additional</td>
-              <td>Upcoming</td>
-              <td align="center">
-                <select>
-                  <option>
-                    Active
-                  </option>
-                </select>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    </div>
+    <div class="row col-md-12">
+      <br />
+    </div>
+    <div id="table" class="row col-md-12">
+      <table class="table table-bordered table-striped table-hover input-sm">
+        <thead>
+          <tr>
+            <th class="col-md-6">Task Description</th>
+            <th class="col-md-2">Status</th>
+            <th class="col-md-4">Actions</th>
+          </tr>
+          <!-- style="width: 60%;"> -->
+        </thead>
+        <tbody>
+          <tr *ngFor="let t of viewTask">
+            <td>{{t.TaskDesc}}</td>
+            <td>{{t.TaskStatus}}</td>
+            <td align="center">
+              <select [(ngModel)]="t.TaskStatus" class="form-control" (change)="changeStatus(t)">
+                <option selected disabled value="Defined" >- Change status -</option>
+                <option *ngFor="let ts of taskStatuses">
+                  {{ts.TaskStatus}}
+                </option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <!-- </div> -->
   </div>

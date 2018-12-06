@@ -7,3 +7,5 @@ export * from './contact.service'
 export * from './mapcode.service'
 export * from './projectdependencies.service';
 export * from './project.service';
+export * from './task.service';
+export * from './taskstatuses.service';

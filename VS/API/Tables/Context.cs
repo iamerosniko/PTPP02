@@ -17,5 +17,6 @@ namespace API.Tables
     public DbSet<PP_Tasks> Tasks { get; set; }
     public DbSet<PP_MapCode> MapCodes { get; set; }
     public DbSet<PP_ProjectContacts> ProjectContacts { get; set; }
+    public DbSet<PP_TaskStatuses> TaskStatuses { get; set; }
   }
 }

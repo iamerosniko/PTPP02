@@ -62,6 +62,22 @@ export interface Projects{
     GroupName?:string
 }
 
+export interface Tasks{
+    // public Guid TaskID { get; set; }
+    // public Guid ProjectID { get; set; }
+    // public string TaskDesc { get; set; }
+    // public string TaskStatus { get; set; }
+    TaskID ?: string,
+    ProjectID ?: string,
+    TaskDesc ?: string,
+    TaskStatus ?: string
+}
+
+export interface TaskStatuses{
+    TaskStatusID?:number,
+    TaskStatus?:string
+}
+
 export interface ProjectContacts {
     MainID ?: string,
     Contacts ?: string,

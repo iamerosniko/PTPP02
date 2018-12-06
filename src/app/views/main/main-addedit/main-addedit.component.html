@@ -5,6 +5,7 @@
     <h3>Main</h3>
     <hr style="border-bottom: 1px solid #2196F3; margin-left: -15px; margin-right: -45px; " />
   </div>
+  <label style="color: red">Project number auto generate not available as of now. still researching for an algorithm for this </label>
 
   <div class="row col-md-12">
     <div class="col-md-3">
@@ -69,6 +70,10 @@
             <div id="boditems" class="row col-md-12 ">
               <label class="control-label">Status</label>
               <input [(ngModel)]="project.Status" type="text" class="form-control input-sm" disabled>
+            </div>
+            <div id="boditems" class="row col-md-12 ">
+              <label class="control-label">Number of Tasks</label>
+              <input [(ngModel)]="project.NumberOfTasks" type="text" class="form-control input-sm" disabled>
             </div>
           </div>
           <div class="col-md-6">

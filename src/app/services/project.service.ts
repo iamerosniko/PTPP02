@@ -27,7 +27,6 @@ export class ProjectService {
   }
 
   postProject(data: Projects) {
-    console.log(data)
     this.api.normalHeader();
     this.api.apiUrl=ClientApiSettings.GETAPIURL("PP_Projects")
     var body = JSON.stringify(data);
